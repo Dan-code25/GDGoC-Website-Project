@@ -46,7 +46,7 @@
 
 .role{
   font-family: "ProductSans", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 13px;
   color: #EA4335;
   margin: 0;
@@ -55,6 +55,7 @@
 
 .name{
   font-family: 'ProductSans', sans-serif;
+  font-weight: 400;
   color: #EA4335;
   font-size: 13px;
   margin: 0;
@@ -136,9 +137,7 @@
   }
 
   .role {
-    font-family: "ProductSans", sans-serif;
     font-size: 18px;
-    font-weight: 400;
   }
 
   .viewButton {
