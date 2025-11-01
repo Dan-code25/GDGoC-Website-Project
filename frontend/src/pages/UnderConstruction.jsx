@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import Navbar from "../components/navigation-bar/Navbar";
 import Footer from "../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +8,11 @@ import { assets } from "../assets/assets";
 
 const UnderConstruction = () => {
   const navigate = useNavigate(); 
+
+  useEffect(() => {
+    document.title = "Under Construction | GDGoC TUPM";
+  }, []);
+
   return (
      <>
      <Navbar />
