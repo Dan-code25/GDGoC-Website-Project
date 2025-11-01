@@ -4,6 +4,7 @@ import Etang from './Mark Lorenz G. Etang_Auditor.png';
 import Flores from './Princess Venice Flores_Finance Assistant.png';
 import Nava from './Rainiel E. Nava_Finance Assistant.png';
 import Cruz from './Roshny Jen Cruz_Finance Relations Manager.png';
+import Lerios from './lerios.png';
 
 
 const finance = {
@@ -13,6 +14,7 @@ const finance = {
   Flores,
   Nava,
   Cruz,
+  Lerios,
 }
 
 export default finance;

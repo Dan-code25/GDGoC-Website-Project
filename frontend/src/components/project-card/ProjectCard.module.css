@@ -46,7 +46,7 @@
 
 .role{
   font-family: "ProductSans", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 13px;
   color: #EA4335;
   margin: 0;
@@ -55,6 +55,7 @@
 
 .name{
   font-family: 'ProductSans', sans-serif;
+  font-weight: 400;
   color: #EA4335;
   font-size: 13px;
   margin: 0;
@@ -66,7 +67,7 @@
 }
 
 .viewButton{
-  border: none;
+  border: 2px solid #EA4335;
   border-radius: 20px;
   color: white;
   background-color: #EA4335;
@@ -75,6 +76,13 @@
   font-size: 18px;
   margin-top: 32px;
   padding: 8px 70px 8px 70px;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover{
+  color: #EA4335;
+  background-color: transparent;
+  border: 2px solid #EA4335;
 }
 
 @media (min-width: 50px) {
@@ -136,9 +144,7 @@
   }
 
   .role {
-    font-family: "ProductSans", sans-serif;
     font-size: 18px;
-    font-weight: 400;
   }
 
   .viewButton {

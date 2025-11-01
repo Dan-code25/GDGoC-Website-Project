@@ -6,6 +6,8 @@ import Lazo from './Nicole Drew Lazo_Promotions Lead.png';
 import Gayanes from './Prince Kyle GayanesPublication and Certifications Lead.png';
 import Egar from './Samantha Egar_Creatives & Branding Lead.png';
 import Liljanria from './Liljanria Nicole Dequiña_Creatives & Branding Lead.png';
+import Rentoria from './Rentoria.png';
+import Dabao from './dabao.png';
 
 
 const comm = {
@@ -17,6 +19,8 @@ const comm = {
   Gayanes,
   Egar,
   Liljanria,
+  Rentoria,
+  Dabao,
 }
 
 export default comm;

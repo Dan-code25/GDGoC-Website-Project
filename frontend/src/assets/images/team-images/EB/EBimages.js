@@ -1,4 +1,4 @@
-import Reyes from './BLUE_copy.png';
+import Reyes from './Alfred_reyes.svg';
 import Torion from './Clifford Roy E Torion_Chief Innovations Officer.png';
 import Ropeta from './Hannah Lorraine Ropeta_Executive Secretary.png';
 import Padua from './Jefferson Padua_Chief Finance Officer.png';

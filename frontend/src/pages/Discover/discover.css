@@ -8,6 +8,7 @@
 
 .waves {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,6 +21,7 @@
   display: block;
   line-height: 0;
   object-fit: cover;
+  object-position: center;
   margin:0 auto;
 }
 
@@ -126,17 +128,21 @@
   gap: 6px;
   background: #ea4335;
   color: white;
+  justify-content: center;
+    flex-shrink: 0; 
 }
 
 .btn-primary .btn-icon {
   width: 18px;
   height: 18px;
   margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .faq-question {
   color: #EA4335;
   font-weight: bold;
+  font-size: 22px;
   font-family: 'Product Sans Medium', sans-serif;
 }
 
@@ -158,7 +164,12 @@
   opacity: 0.7;
 }
 
-/*TABLET (768px - 1199px)*/
+.footer {
+  position: relative;
+  z-index: 3;
+}
+
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .content-overlay {
     padding: 2rem 2.5rem;
@@ -180,7 +191,7 @@
       "p"
       "btn";
     justify-items: center !important;
-    align-items: center;
+    align-items: center ;
     text-align: center;
     padding: 3rem 2rem;
     gap: 1.2rem 0;
@@ -225,7 +236,6 @@
   .content-grid.reverse .content-body,
   .content-grid.reverse .btn-primary {
     justify-self: center !important;
-    padding-left: 0 !important;
     margin-left: 20px;
   }
 
@@ -238,6 +248,11 @@
     height: 2.5px;
     margin: -20px auto 40px auto;
   }
+
+ .footer {
+  position: relative;
+  z-index: 3;
+}
 }
 
 /* MOBILE (max-width: 767px)*/
@@ -320,7 +335,6 @@
   .btn-primary .btn-icon {
     width: 16px;
     height: 16px;
-    margin-right: 8px;
   }
 
   .content-grid.reverse h1,
@@ -328,7 +342,6 @@
   .content-grid.reverse .content-body,
   .content-grid.reverse .btn-primary {
     justify-self: center !important;
-    padding-left: 0 !important;
     margin-left: 20px;
   }
 
@@ -340,4 +353,9 @@
     width: 90%;
     margin: -5px auto 10px auto;
   }
+
+  .footer {
+  position: relative;
+  z-index: 3;
+}
 }

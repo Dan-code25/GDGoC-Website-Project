@@ -107,7 +107,7 @@ function Navbar() {
             </a>
             <Link to="/project" className={styles.project}>Project</Link>
             <Link to="/team" className={styles.team}>Team</Link>
-            <button className={styles.joinButton}>JOIN US</button>
+            <button className={styles.joinButton}  onClick={() =>  window.open("https://forms.gle/vfEcZzgwc1ugVaCTA", "_blank")}>JOIN US</button>
             <button type='button' className={styles.profile}
               onClick={e => {
                 if (gdgID) {
@@ -200,7 +200,7 @@ function Navbar() {
               </a>
               <Link to='/project' className={styles.project} onClick={handleNavClick}>Project</Link>
               <Link to='/team' className={styles.team} onClick={handleNavClick}>Team</Link>
-              <button className={styles.joinButton}>JOIN US</button>
+              <button className={styles.joinButton}  onClick={() =>  window.open("https://forms.gle/vfEcZzgwc1ugVaCTA", "_blank")}>JOIN US</button>
             </div>
           </div>
         </div>

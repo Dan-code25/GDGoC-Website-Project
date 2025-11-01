@@ -13,6 +13,9 @@ import Bigol from './Reign Ivann Bigol_Project Management Lead.png';
 import Lucino from './Sean V. Lucino_Backend Development Lead.png';
 import Valenzuela from './Sharmaine Hannah Valenzuela_UIUX Design Lead.png';
 import Santos from './Vince Merick Santos_UIUX Design Lead.png';
+import Flores from './flores.png';
+import Arboleda from './arboleda.png';
+import Solitario from './solitario.png';
 
 const tech = {
   Galedo,
@@ -30,6 +33,9 @@ const tech = {
   Lucino,
   Valenzuela,
   Santos,
+  Flores,
+  Arboleda,
+  Solitario,
 }
 
 export default tech;
