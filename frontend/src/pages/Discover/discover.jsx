@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import "./discover.css";
 import Navbar from "../../components/navigation-bar/Navbar.jsx";
@@ -21,7 +19,7 @@ import asset_4_7 from "../../assets/home-images/asset_4_7.png";
 
 export default function Discover() {
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     document.title = "Discover | GDGoC TUPM";
   }, []);
@@ -82,11 +80,12 @@ export default function Discover() {
               problems in our community.
             </p>
           </div>
-          <div>
+          <div className="btn-wrapper">
             <button className="btn-primary" onClick={() => navigate("/project")}>
-              Projects 
+              Projects
             </button>
           </div>
+
         </section>
 
         {/* WHAT YOU'LL GET */}
@@ -127,9 +126,8 @@ export default function Discover() {
           <img src={faqs} alt="FAQs" />
           <div className="content-body">
             <p> <span className="faq-question">Is there a Membership Fee?</span></p>
-            <p>Google Developer Groups on Campus is a Student led Non-Profit
-              Organization. We don't require any membership fees to our aspiring
-              Junior Googlers.</p><br/>
+            <p>Google Developer Groups on Campus is a Student-led, Non-Profit Organization.  
+                You can join us through our membership tiers: ₱50 for Googler Pro and ₱35 for Googler Basic.</p><br/>
 
             <p><span className="faq-question"> Are events held online or hybrid?</span></p>
             <p>The events can be held either online or in-person (face to face),

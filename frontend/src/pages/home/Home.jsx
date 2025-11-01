@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
@@ -25,6 +25,7 @@ import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
 import Chatbot from '../../components/chatbot/ChatBotOverlay';
 
+
 const slides = [
   slide_default_1,  
   slide_default_2,  
@@ -38,11 +39,7 @@ const slides = [
   slide_default_10,
 ];
 
-export default function Slideshow() {
-  useEffect(() => {
-    document.title = "Home | GDGoC TUPM";
-  }, []);
-
+export default function Slideshow() { 
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
@@ -52,34 +49,37 @@ export default function Slideshow() {
   const toggleChat = () => {
     setIsChatOpen((prevState) => !prevState);
   };
-
+  
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
-  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
-  const goNext = () => setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
+  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1)); 
+  const goNext = () =>
+    setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
+
+  
 
   return (
-    <>
+    <div>
+      <Navbar />
       <section className="slideshow-wrap">
-        <Navbar />
-
+      <AnimationBackground />
         <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {slides.map((slide, index) => (
             <div
               className="slide"
               key={index}
-              style={{ backgroundImage: `url(${slide})` }}
-            />
-          ))}
-          <AnimationBackground />
-        
+              style={{ backgroundImage: `url(${slide})` }} 
+            /> 
+          ))} <AnimationBackground />
+        </div> 
+
 
         <div className="overlay">
           <h1>
-            Connecting Student Developers<br /> with the Power of {" "}
+            Connecting Student Developers<br/> with the Power of{" "}
             <span className="google">
               <span>G</span>
               <span>o</span>
@@ -87,23 +87,38 @@ export default function Slideshow() {
               <span>g</span>
               <span>l</span>
               <span>e</span>
-            </span>{" "} Technologies
-          </h1>
+            </span> {" "} Technologies
+          </h1> 
 
           <p>
-            The official Google Developer Groups on Campus at
-            <span className="tup"> <br />
+            The official Google Developer Groups on Campus at 
+            <span className="tup"> <br/>
               Technological University of the Philippines - Manila
             </span>
-          </p>
+          </p> 
 
-          <button className="btn-primary" onClick={() => navigate("/discover")}>Discover GDGoC</button>
+          <button 
+              className="btn-primary" 
+              onClick={() => navigate("/discover")}
+          >
+            Discover GDGoC
+          </button>
         </div>
 
-        <div className="controls">
-          <button className="arrow-btn prev" onClick={goPrev} aria-label="Previous slide" />
-          <button className="arrow-btn next" onClick={goNext} aria-label="Next slide" />
+        <div >  
+          
+          <button
+              className="arrow-btn prev"
+              onClick={goPrev}
+              aria-label="Previous slide"
+            />
 
+            <button
+              className="arrow-btn next"
+              onClick={goNext}
+              aria-label="Next slide"
+            />
+                      
           {/* dots */}
           <div className="dots">
             {slides.map((_, i) => (
@@ -131,12 +146,10 @@ export default function Slideshow() {
             onMouseEnter={() => setIsGithubHover(true)}
             onMouseLeave={() => setIsGithubHover(false)}
           />
-          </div>
         </div>
-      <Footer />
       </section>
-
-      
-    </>
+    
+      <Footer />
+    </div>
   );
 }

@@ -24,10 +24,16 @@ function Footer(){
         </div>
         <div className="d-flex flex-column align-items-center align-items-md-start">
           <h1 className={styles.footerTitle}>Keep up with us!</h1>
-          <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Join us on our digital adventures across various platforms!</h3>
+          <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Join us on our digital adventures across various platforms!</h3> 
+         
           {/* Social media buttons */}
           <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center`}>
-            <button className={styles.gmailButton}>
+            <a className={styles.gmailButton}
+               href="https://mail.google.com/mail/?view=cm&to=gdsctupm@tup.edu.ph"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+
               <svg width="50" height="40" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
                 <path className={styles.gmailBlue} d="M11.175 39.8031V19.3036L5.28328 13.4875L0 10.2599V36.1855C0 38.1872 1.50295 39.8031 3.35259 39.8031H11.175Z" />
                 <path className={styles.gmailGreen} d="M37.995 39.8031H45.8174C47.6726 39.8031 49.17 38.1811 49.17 36.1855V10.2601L43.1859 13.9569L37.995 19.3036V39.8031Z" />
@@ -35,13 +41,21 @@ function Footer(){
                 <path className={styles.gmailYellow} d="M37.995 3.62777L37.995 19.3036L49.17 10.2601V5.43648C49.17 0.962902 44.4374 -1.58736 41.1242 1.09554L37.995 3.62777Z" />
                 <path className={styles.gmailDarkRed} d="M0 10.2599L11.175 19.3036V3.62777L8.04583 1.09557C4.72685 -1.58753 0 0.962932 0 5.4363V10.2599Z" />
               </svg>
-            </button>
-            <button className={styles.facebookButton}>
+            </a>
+            <a className={styles.facebookButton}
+              href="https://www.facebook.com/GDGonCampusTUPManila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg width="42" height="40" viewBox="0 0 42 40" xmlns="http://www.w3.org/2000/svg">
                 <path d="M42 20.0501C42 8.98246 32.592 0 21 0C9.408 0 0 8.98246 0 20.0501C0 29.7544 7.224 37.8346 16.8 39.6992V26.0652H12.6V20.0501H16.8V15.0376C16.8 11.1679 20.097 8.02005 24.15 8.02005H29.4V14.0351H25.2C24.045 14.0351 23.1 14.9373 23.1 16.0401V20.0501H29.4V26.0652H23.1V40C33.705 38.9975 42 30.4561 42 20.0501Z"/>
               </svg>
-            </button>
-            <button className={styles.instagramButton}>
+            </a>
+            <a className={styles.instagramButton}
+                href="https://www.instagram.com/gdgoctup/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
               <svg
                 width="41"
                 height="40"
@@ -69,8 +83,12 @@ function Footer(){
                   </linearGradient>
                 </defs>
               </svg>
-            </button>
-            <button className={styles.twitterButton}>
+            </a>
+            <a className={styles.twitterButton}
+              href="https://x.com/GDSCTUPManila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="49"
                 height="40"
@@ -83,8 +101,12 @@ function Footer(){
                   fill="#1D9BF0"
                 />
               </svg>
-            </button>
-            <button className={styles.linkedinButton}>
+            </a>
+            <a className={styles.linkedinButton}
+                href="https://www.linkedin.com/company/gdgoctupmanila"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
               <svg
                 width="40"
                 height="40"
@@ -97,7 +119,7 @@ function Footer(){
                   fill="#0077B7"
                 />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>

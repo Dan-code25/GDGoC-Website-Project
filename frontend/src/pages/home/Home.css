@@ -401,6 +401,7 @@
 
   .overlay p {
     font-size: 20px;
+    font-family: "ProductLight", sans-serif !important;
   }
 
   .btn-primary {
@@ -442,6 +443,7 @@
 
   .overlay p {
     font-size: 20px;
+    font-family: "ProductLight", sans-serif !important;
   }
 
   .btn-primary {
