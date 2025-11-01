@@ -77,9 +77,9 @@ export default function Slideshow() {
               key={index}
               style={{ backgroundImage: `url(${slide})` }} 
             /> 
-          ))} <AnimationBackground />
+          ))} 
         </div> 
-
+      <AnimationBackground />
 
         <div className="overlay">
           <h1>
