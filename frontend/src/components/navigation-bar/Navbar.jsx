@@ -6,12 +6,16 @@ import Profile from '../Profile/Profile';
 import { useUser } from '../../context/UserContext';
 import React, { useState } from 'react';
 import LogIn from '../../pages/LogIn/LogIn';
+import ChangePassword from '../ChangePassword/ChangePassword';
 
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [isLoginClosing, setIsLoginClosing] = useState(false);
+  const [showChangePassword, setShowChangePassword] = useState(false);
+  const [isChangePasswordClosing, setIsChangePasswordClosing] = useState(false);
+
 
   const { gdgID, logout, profilePic } = useUser();
 
@@ -29,6 +33,7 @@ function Navbar() {
     }, 300); 
   };
 
+  // Login Modal handlers
   const handleClose = () => {
     setIsClosing(true); 
     setTimeout(() => {
@@ -44,6 +49,20 @@ function Navbar() {
       setIsLoginClosing(false);   
     }, 300); 
   };
+
+  // Change Password Modal handlers
+  const handleChangePasswordOpen = () => {
+    setShowProfile(false);
+    setShowChangePassword(true);
+  }
+
+  const handleChangePasswordClose = () => {
+    setIsChangePasswordClosing(true);
+    setTimeout(() => {
+      setShowChangePassword(false);
+      setIsChangePasswordClosing(false);
+    }, 300);
+  }
 
   
   const handleNavClick = () => {
@@ -64,6 +83,8 @@ function Navbar() {
       dismissBtn.click();
     }
   };
+
+
 
   return (
     <>
@@ -191,6 +212,7 @@ function Navbar() {
           <Profile 
             onClose={handleClose} 
             onSignOut={handleSignOut} 
+            onChangePassword={handleChangePasswordOpen}
             isClosing={isClosing} 
           />
         </div>
@@ -205,8 +227,17 @@ function Navbar() {
           />
         </div>
       )}
-      
 
+
+      {/* Change Password Modal - only show if no user is logged in */}
+      {showChangePassword && gdgID && (
+        <div className="OverlayChangePassword" onClick={handleChangePasswordClose}>
+          <ChangePassword 
+            onClose={handleChangePasswordClose} 
+            isClosing={isChangePasswordClosing} 
+          />
+        </div>
+      )}
 
     </>
   );

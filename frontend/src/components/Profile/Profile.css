@@ -1,7 +1,5 @@
 /* Abstract background shape for light gradient effect */
 
-
-
 .profile-container {
     height: 500px;
     width: 800px;
@@ -17,7 +15,6 @@
     position: relative;
     z-index: 11;
 }
-
 
 
 .name {
@@ -99,6 +96,33 @@
     margin: 0;
     width: 100%;
 }
+
+.change-password-button{
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(5, 81%, 56%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.change-password-button:hover{
+    background-color: hsla(5, 81%, 46%, 0.5);
+    box-shadow: 0px 4px 15px hsla(5, 81%, 56%, 0.40);
+    border: none;
+}
+
+.change-password-button:active{
+    transform: scale(0.98);
+    background-color: hsla(151, 83%, 34%, 1.00);
+    box-shadow: 0px 2px 8px hsla(151, 83%, 44%, 0.40);
+    border: none;
+}
+
+
 
 .exp-box {
     width: 80%;

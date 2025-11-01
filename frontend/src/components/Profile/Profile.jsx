@@ -5,7 +5,7 @@ import { useUser } from '../../context/UserContext';
 import AnimationBackground from '../AnimationBackground/AnimationBackground';
 
 
-function Profile({ onClose , onSignOut, isClosing}){
+function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
     const [exiting, setExiting] = useState(false);
     const { firstName, lastName, username, gdgID, gdg_pts, profilePic, setProfilePic} = useUser()
 
@@ -19,6 +19,13 @@ function Profile({ onClose , onSignOut, isClosing}){
         
         setTimeout(() => {
             onSignOut();
+        }, 300);
+    };
+
+    const handleChangePasswordClick = () => {
+        setExiting(true);
+        setTimeout(() => {
+            onChangePassword();
         }, 300);
     };
 
@@ -79,6 +86,11 @@ function Profile({ onClose , onSignOut, isClosing}){
                         <p className='gdgID'>
                             <span className='gdgID-prefix'>GDGTUP-25-</span>{gdgID}
                         </p>
+                        <button className='change-password-button' 
+                            onClick={handleChangePasswordClick}
+                        >
+                            Change Password
+                        </button>
                     </div>
                 </div>
                 <div className="exp-box">
