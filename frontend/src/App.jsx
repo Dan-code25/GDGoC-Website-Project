@@ -10,6 +10,7 @@ import MembershipClosed from './pages/MembershipClosed.jsx';
 import Error404 from './pages/Error404.jsx';
 import UnderConstruction from './pages/UnderConstruction.jsx';
 import ChangePassword from './components/ChangePassword/ChangePassword.jsx';
+import ChatbotOverlay from './components/chatbot/ChatBotOverlay.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <UserProvider>
       <Router>
         <ScrollToTop />
+        <ChatbotOverlay/>
         <Routes>
           <Route index path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />

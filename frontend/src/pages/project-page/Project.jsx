@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 // react components
 import Navbar from "../../components/navigation-bar/Navbar";
 import HeroText from "../../components/hero-text/Herotext";
@@ -17,6 +18,10 @@ import AnimationBackground from "../../components/AnimationBackground/AnimationB
 
 
 function Project(){
+  useEffect(() => {
+    document.title = "Project | GDGoC TUPM";
+  }, []);
+
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
       <AnimationBackground />
