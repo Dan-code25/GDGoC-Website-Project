@@ -13,7 +13,7 @@ function Footer(){
             <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Want to be part of our community? Have something in mind?</h3>
             <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center gap-3`}>
               <button className={styles.btnprimary} 
-                onClick={() => navigate("/MembershipClosed")}>
+                onClick={() =>  window.open("https://forms.gle/vfEcZzgwc1ugVaCTA", "_blank")}>
                 Join us!
               </button>
               <button className={styles.btnsecondary} 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
@@ -59,6 +60,9 @@ export default function Slideshow() {
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
+  useEffect(() => {
+    document.title = "Home | GDGoC TUPM";
+  }, []);
   
 
   return (
@@ -73,9 +77,9 @@ export default function Slideshow() {
               key={index}
               style={{ backgroundImage: `url(${slide})` }} 
             /> 
-          ))} <AnimationBackground />
+          ))} 
         </div> 
-
+      <AnimationBackground />
 
         <div className="overlay">
           <h1>
