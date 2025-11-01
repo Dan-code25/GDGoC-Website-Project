@@ -19,7 +19,7 @@ import AnimationBackground from "../../components/AnimationBackground/AnimationB
 function Project(){
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
-      <AnimationBackground />
+      {/* <AnimationBackground /> */}
 
       <Navbar />
       
