@@ -33,7 +33,7 @@
 
 @keyframes colorChange {
   0%   { background: hsl(5, 81%, 56%); }  
-  33%  { background: hsl(217, 89%, 61%); } 
+  33%  { background: hsl(217, 80%, 54%); } 
   66%  { background: hsl(151, 85%, 38%); } 
   100% { background: hsl(45, 87%, 50%); }  
 }
