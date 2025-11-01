@@ -21,7 +21,7 @@ function Footer(){
                 Join us!
               </button>
               <button className={styles.btnsecondary} 
-                onClick={() => navigate("/UnderConstruction")}>
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeGj3Hr-DPiiv1nc_7QdiKkWpH92Ry0ZMTYHdLxVDi-RXafGA/viewform", "_blank")}>
                 Message us!
               </button>
             </div>

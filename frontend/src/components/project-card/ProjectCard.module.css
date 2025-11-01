@@ -67,7 +67,7 @@
 }
 
 .viewButton{
-  border: none;
+  border: 2px solid #EA4335;
   border-radius: 20px;
   color: white;
   background-color: #EA4335;
@@ -76,6 +76,13 @@
   font-size: 18px;
   margin-top: 32px;
   padding: 8px 70px 8px 70px;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover{
+  color: #EA4335;
+  background-color: transparent;
+  border: 2px solid #EA4335;
 }
 
 @media (min-width: 50px) {
