@@ -59,6 +59,9 @@ export default function Slideshow() {
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
+  useEffect(() => {
+    document.title = "Home | GDGoC TUPM";
+  }, []);
   
 
   return (
