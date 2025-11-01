@@ -26,8 +26,7 @@ export default function Discover() {
 
 
   return (
-    <section className="content">
-      <Navbar />
+    <section id="discover-section" className="content">
 
       <div className="waves">
         <img src={asset_1} alt="wave 1" />
@@ -108,7 +107,11 @@ export default function Discover() {
             </p>
           </div>
           <div>
-            <button className="btn-primary">
+            <a className="btn-primary"
+               href="https://codelabs.developers.google.com/"
+               target="_blank"
+               rel="noreferrer"
+            >
               Codelabs 
                <svg width="16" height="16" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
                   <path
@@ -116,7 +119,7 @@ export default function Discover() {
                    fill="currentColor"
                    />
                  </svg>
-            </button>
+            </a>
           </div>
         </section>
 
@@ -126,22 +129,21 @@ export default function Discover() {
           <img src={faqs} alt="FAQs" />
           <div className="content-body">
             <p> <span className="faq-question">Is there a Membership Fee?</span></p>
-            <p>Google Developer Groups on Campus is a Student-led, Non-Profit Organization.  
-                You can join us through our membership tiers: ₱50 for Googler Pro and ₱35 for Googler Basic.</p><br/>
+            <p className="faq">Google Developer Groups on Campus is a student-led non-profit organization. 
+              We provide two membership options to support community initiatives: 
+             <span className="membership-fee">  Googler Pro (₱50) </span> and  <span className="membership-fee"> Googler Basic (₱35) </span>.</p><br/>
 
             <p><span className="faq-question"> Are events held online or hybrid?</span></p>
-            <p>The events can be held either online or in-person (face to face),
+            <p className="faq">The events can be held either online or in-person (face to face),
               depending on the circumstances and preferences.</p><br/>
 
             <p><span className="faq-question"> I'm not from TUP Manila, can I still join?</span></p>
-            <p>Unfortunately, we only accept TUP Manila students as of the
+            <p className="faq">Unfortunately, we only accept TUP Manila students as of the
               moment.</p><br/>
           </div>
         </section>
       <hr className="section-divider" />
       </div>
-
-      <Footer />
     </section>
   );
 }

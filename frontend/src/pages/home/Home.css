@@ -13,7 +13,7 @@
   margin: 0;      
   overflow: hidden;
   position: relative; 
-  height: auto; 
+  height: 600px; 
   
 }
 
@@ -79,7 +79,7 @@
 }
 
 .overlay p {
-  font-family: "ProductLight", sans-serif !important;
+  font-family: "ProductSans", sans-serif !important;
   font-size: clamp(15px, 1.8vw, 20px) !important;
   font-weight: 400;
   opacity: 0.6;
@@ -118,6 +118,8 @@
   border-radius: 12px;
   border: 1.5px solid #ea4335;
   transition: 0.5s;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-primary:hover {
@@ -130,7 +132,7 @@
 .arrow-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(38%);
+  transform: translateY(71%);
   width: 100px;
   height: 100px;
   border: none;
@@ -256,7 +258,7 @@
   }
 
  .arrow-btn{
-    top:23%;
+    top:20%;
   }
 
   .overlay {

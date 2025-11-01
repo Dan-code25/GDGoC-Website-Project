@@ -1,64 +1,53 @@
 .section {
   position: fixed;
+  inset: 0;
   height: 100vh;
   width: 100vw;
-  inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 
 .blob {
   position: absolute;
-  width: 25%;
-  aspect-ratio: 1/1;
+  width: clamp(100px, 22vw, 420px);   
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  filter: blur(220px);
+  filter: blur(clamp(80px, 14vw, 200px)) brightness(1.25) saturate(1.4);
+  opacity: 0.9; 
+  transition: width 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .blob-1 {
   top: -20%;
   right: -5%;
-  animation: colorChange 7s infinite alternate, moveBlob1 7s infinite alternate;
+  animation: colorChange 9s infinite alternate ease-in-out,
+             moveBlob1 9s infinite alternate ease-in-out;
 }
 
 .blob-2 {
   bottom: -20%;
   left: -5%;
-  animation: colorChange 7s infinite alternate, moveBlob2 7s infinite alternate;
+  animation: colorChange 9s infinite alternate ease-in-out,
+             moveBlob2 9s infinite alternate ease-in-out;
 }
 
 @keyframes colorChange {
-  0%   { background: hsl(5, 81%, 56%); }
-  33%  { background: hsl(217, 89%, 61%); }
-  66%  { background: hsl(151, 83%, 34%); }
-  100%  { background: hsl(45, 97%, 50%); }
+  0%   { background: hsl(5, 81%, 56%); }  
+  33%  { background: hsl(217, 89%, 61%); } 
+  66%  { background: hsl(151, 85%, 38%); } 
+  100% { background: hsl(45, 87%, 50%); }  
 }
 
-
 @keyframes moveBlob1 {
-  0%   { top: -20%; right: -5%;}
-  33%  { top: -20%; right: 50%; }
-  66%  { top: -20%; right: 5%; }
-  100%  { top: 50%; right: 5%; }
+  0%   { top: -20%; right: -5%; transform: scale(1); }
+  33%  { top: -10%; right: 40%; transform: scale(1.2); }
+  66%  { top: -15%; right: 10%; transform: scale(0.9); }
+  100% { top: 40%; right: 10%; transform: scale(1.1); }
 }
 
 @keyframes moveBlob2 {
-  0%   { bottom: -20%; left: -5%;}
-  33%  { bottom: -20%; left: 50%; }
-  66%  { bottom: -20%; left: 5%; }
-  100%  { bottom: 50%; left: 5%; }
-}
-
-@media (max-width: 600px) {
-  .blob {
-    width: 160px;
-    filter: blur(100px);
-  }
-}
-
-@media (max-width: 480px) {
-  .blob {
-    width: 120px;
-    filter: blur(100px);
-  }
+  0%   { bottom: -20%; left: -5%; transform: scale(1); }
+  33%  { bottom: -10%; left: 40%; transform: scale(1.2); }
+  66%  { bottom: -15%; left: 10%; transform: scale(0.9); }
+  100% { bottom: 40%; left: 10%; transform: scale(1.1); }
 }
