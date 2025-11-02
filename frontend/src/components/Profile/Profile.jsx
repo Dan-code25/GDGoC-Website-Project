@@ -84,7 +84,7 @@ function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
                             <span className='username-@'>@</span>{username}
                         </p>
                         <p className='gdgID'>
-                            <span className='gdgID-prefix'>GDGTUP-25-</span>{gdgID}
+                            <span className='gdgID-prefix'></span>{gdgID}
                         </p>
                         <button className='change-password-button' 
                             onClick={handleChangePasswordClick}
