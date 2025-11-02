@@ -69,16 +69,22 @@ export default function Slideshow() {
     <div>
       <Navbar />
       <section className="slideshow-wrap">
+        <div className="global-anim-overlay">
+          <AnimationBackground />
+        </div>
+
         <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {slides.map((slide, index) => (
             <div
               className="slide"
               key={index}
               style={{ backgroundImage: `url(${slide})` }} 
-            /> 
-          ))} <AnimationBackground />
+            >
+
+            </div> 
+          ))} 
+
         </div> 
-      
 
         <div className="overlay">
           <h1>
