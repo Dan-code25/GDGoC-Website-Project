@@ -85,8 +85,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
     <div className="w-80 sm:w-96 h-[60vh] max-h-[700px] flex flex-col bg-red-500 rounded-2xl shadow-2xl overflow-hidden border-2 border-red-500">
       <header className="bg-red-500 text-white p-3 flex items-center justify-between gap-4 shadow-md flex-shrink-0">
         <div className="flex items-center gap-3">
-          <GooglerAiIcon className="w-9 h-9" />
-          <h2 className="text-lg font-bold">{BOT_NAME}</h2>
+          <GooglerAiIcon className="w-9 h-9 shrink-0" />
+          <h2 
+            className="text-xl font-bold m-0 leading-none relative top-[-2px]"
+            style={{ textShadow: '0px 2px 4px rgba(0,0,0,0.35)' }}
+          >
+            {BOT_NAME}
+          </h2>
         </div>
         <button 
           onClick={onClose} 
@@ -99,27 +104,32 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
       <div className="flex-1 p-4 overflow-y-auto bg-slate-50 custom-scrollbar">
         <div className="flex flex-col gap-2">
           {messages.map((message, index) => (
-            <ChatBubble
-              key={message.id}
-              message={message}
-              avatar={message.sender === Sender.User ? <UserIcon /> : <GooglerAiIcon className="w-full h-full" />}
-              isTyping={
-                isLoading &&
-                index === messages.length - 1 &&
-                message.sender === Sender.Bot &&
-                !message.text
-              }
-            />
+            <React.Fragment key={message.id}>
+              <ChatBubble
+                key={message.id}
+                message={message}
+                avatar={message.sender === Sender.User ? <UserIcon /> : <GooglerAiIcon className="w-full h-full" />}
+                isTyping={
+                  isLoading &&
+                  index === messages.length - 1 &&
+                  message.sender === Sender.Bot &&
+                  !message.text
+                }
+              />
+              
+              {index === 0 && message.sender === Sender.Bot && (
+                <FaqSuggestions
+                  suggestions={FAQ_SUGGESTIONS}
+                  onSuggestionClick={handleSendMessage}
+                />
+              )}
+            </React.Fragment>
           ))}
-          {messages.length === 1 && (
-            <FaqSuggestions
-              suggestions={FAQ_SUGGESTIONS}
-              onSuggestionClick={handleSendMessage}
-            />
-          )}
+        
           <div ref={messagesEndRef} />
         </div>
       </div>
+
       {error && <p className="p-2 text-sm text-red-500 bg-red-100">{error}</p>}
       <div className="p-4 border-t border-slate-200 bg-white">
         <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
