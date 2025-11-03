@@ -28,7 +28,7 @@ function Project(){
         header = "Explore our Project"
         subtext = {
           <>
-            Explore tech excellence with GDSC TUP Manila! Join us for <span className={heroStyles.highlight1}>innovative projects</span>, <span className={heroStyles.highlight2}>tech excellence</span>, <span className={heroStyles.highlight3}>vibrant events</span>, and a <span className={heroStyles.highlight4}>dynamic community</span>. Elevate your skills and be part of shaping the future together!
+            Explore tech excellence with GDGoC TUP Manila! Join us for <span className={heroStyles.highlight1}>innovative projects</span>, <span className={heroStyles.highlight2}>tech excellence</span>, <span className={heroStyles.highlight3}>vibrant events</span>, and a <span className={heroStyles.highlight4}>dynamic community</span>. Elevate your skills and be part of shaping the future together!
           </>
         }
       />

@@ -23,6 +23,7 @@
 
 .sideBar {
   max-width: 50vw !important;
+  z-index: 9999;
 }
 
 .closeButton {
@@ -53,6 +54,7 @@
   transform-origin: left;
   overflow: visible;
   font-size: 18px;
+  margin-bottom: 40px;
 }
 
 .events svg {
@@ -75,6 +77,7 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
+  margin-bottom: 40px;
 }
 
 .home:hover {
@@ -90,6 +93,7 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
+  margin-bottom: 40px;
 }
 
 .project:hover {
@@ -105,6 +109,7 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
+  margin-bottom: 40px;
 }
 
 .team:hover {
@@ -112,7 +117,7 @@
   transform: scale(1.25);
 }
 
-.joinButton{
+.joinButton {
   background: none;
   padding: 4px 25px 4px 25px;
   margin: 0;
@@ -124,9 +129,25 @@
   display: inline-block;
   transform-origin: left;
   color: #202124;
+  margin-bottom: 25px;
 }
 
-.joinButton:hover{
+.loginButton{
+  background: none;
+  padding: 4px 28px 4px 28px;
+  margin: 0;
+  font-family: "ProductSans", sans-serif;
+  font-weight: 700;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.1s ease, background-color 0.1s ease, border 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+  color: #202124;
+}
+
+.joinButton:hover,
+.loginButton:hover{
   color:white;
   background-color: #EA4335;
   border-radius: 8px;
@@ -171,10 +192,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin-top: 113px;
-    margin-bottom: 40px;
     width: 280px;
     height: 280px;
+    margin-top: 50px;
 }
 
 .profilePicSideNav:hover {
@@ -201,8 +221,7 @@
 /* Desktop Size */
 @media (min-width: 1201px) {
   .logo {
-      width: 400px;
-      height: 80px;
+      width: 420px;
   }
 }
 
@@ -219,7 +238,6 @@
 
   .logo {
     width: 320px;
-    height: 54px;
   }
 
   .hamburgerBar {
@@ -232,15 +250,14 @@
   }
 
   .closeButton {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
   }
 
   .profilePicSideNav {
     width: 220px;
     height: 220px;
-    margin-top: 90px;
-    margin-bottom: 32px;
   }
 
   .profilePicNavbar {
@@ -258,11 +275,19 @@
   .project,
   .team {
     font-size: 16px;
+    margin-bottom: 60px;
   }
 
   .joinButton {
     padding: 3px 20px;
     font-size: 16px;
+    border-radius: 7px;
+    margin-bottom: 40px;
+  }
+
+  .loginButton{
+    font-size: 16px;
+    padding: 3px 25px;
     border-radius: 7px;
   }
   
@@ -280,8 +305,7 @@
   }
 
   .logo {
-    width: 193px;
-    height: 34px;
+    width: 210px;
   }
 
   .hamburgerBar {
@@ -301,8 +325,7 @@
   .profilePicSideNav {
     width: 120px;
     height: 120px;
-    margin-top: 60px;
-    margin-bottom: 24px;
+
   }
 
   .profilePicNavbar {
@@ -331,6 +354,12 @@
   .joinButton {
     padding: 2px 16px;
     font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .loginButton{
+    font-size: 14px;
+    padding: 2px 21px;
     border-radius: 6px;
   }
 
