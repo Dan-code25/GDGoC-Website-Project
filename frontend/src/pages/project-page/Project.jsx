@@ -36,7 +36,7 @@ function Project(){
       <ProjectCard 
         image = {websiteProjectImg}
         title = "GDGoC TUPM - Official Website"
-        description = "Welcome to the Google Developer Student Club - TUP Manila website. Immerse yourself in a community of dedicated members, uncover a diverse array of services, and actively engage in the development of unforgettable projects!"
+        description = "Welcome to the Google Developer Groups on Campus - TUP Manila website. Immerse yourself in a community of dedicated members, uncover a diverse array of services, and actively engage in the development of unforgettable projects!"
       />
       <div className={`${styles.container1} d-md-none d-flex`}>
         <img src={stayTunedMobile} alt="stay-tuned" />
