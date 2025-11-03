@@ -68,7 +68,7 @@ export default function Discover() {
         <section className="content-grid reverse">
           <h1>What we do</h1>
           <h2>
-              Build projects together with{" "}
+              Build projects together with{" "}<br/>
               <span className="highlight yellow">Junior Googlers!</span>
           </h2>
           <img src={whatWeDo} alt="What We Do" />
@@ -76,7 +76,8 @@ export default function Discover() {
             <p>
               We bridge the gap between theory and practice. We encourage
               passionate students to build projects that are relevant to solve
-              problems in our community.
+              problems in our community. <br/><br/>
+              Head on to Projects to see what we're currently working on!
             </p>
           </div>
           <div className="btn-wrapper">
