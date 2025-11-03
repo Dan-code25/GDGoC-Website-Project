@@ -5,7 +5,7 @@ import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
 import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
-
+import Discover from "../Discover/discover.jsx";
 
 /* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
@@ -66,7 +66,7 @@ export default function Slideshow() {
   
 
   return (
-    <div>
+ <div>
       <Navbar />
       <section className="slideshow-wrap">
         <div className="global-anim-overlay">
@@ -106,11 +106,16 @@ export default function Slideshow() {
             </span>
           </p> 
 
-          <button 
-              className="btn-primary" 
-              onClick={() => navigate("/discover")}
-          >
-            Discover GDGoC
+          <button
+                className="btn-primary"
+                onClick={() => {
+                  const section = document.getElementById("discover-section");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+            >
+                Discover GDGoC
           </button>
         </div>
 
@@ -127,7 +132,7 @@ export default function Slideshow() {
               onClick={goNext}
               aria-label="Next slide"
             />
-                      
+                
           {/* dots */}
           <div className="dots">
             {slides.map((_, i) => (
@@ -138,9 +143,10 @@ export default function Slideshow() {
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
+            
           </div>
         </div>
-
+     
         {/* sponsors row */}
         <div className="sponsors">
           <img
@@ -156,9 +162,10 @@ export default function Slideshow() {
             onMouseLeave={() => setIsGithubHover(false)}
           />
         </div>
-      </section>
-    
-      <Footer />
+        </section>
+        <Discover/>
+        <Footer />
+      
     </div>
   );
 }

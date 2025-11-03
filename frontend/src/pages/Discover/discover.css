@@ -8,21 +8,19 @@
 
 .waves {
   position: absolute;
-  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
   z-index: 0;
 }
 
 .waves img {
-  width: 100%;
-  height: auto;
-  display: block;
-  line-height: 0;
+  width: 120%;
+  max-width: none;
   object-fit: cover;
-  object-position: center;
-  margin:0 auto;
+  transform: translateX(-10%);
+  display: block;
 }
 
 
@@ -112,7 +110,7 @@
 }
 
 
-.content-grid .content-body p {
+.content-grid .content-body p:not(:has(.faq-question)) {
   margin-bottom: 1rem;
   line-height: 1.3;
   font-size: 16px;
@@ -129,7 +127,7 @@
   background: #ea4335;
   color: white;
   justify-content: center;
-    flex-shrink: 0; 
+  flex-shrink: 0; 
 }
 
 .btn-primary .btn-icon {
@@ -139,11 +137,31 @@
     flex-shrink: 0;
 }
 
+.faq{
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-size: 16px;
+  font-family: 'Product Sans Medium', sans-serif;
+  max-width: 60ch;
+  opacity: 0.7;
+}
+
 .faq-question {
   color: #EA4335;
   font-weight: bold;
   font-size: 22px;
+  opacity: 1 !important;
   font-family: 'Product Sans Medium', sans-serif;
+}
+
+.membership-fee {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-size: 16px;
+  font-family: 'Product Sans Medium', sans-serif;
+  max-width: 60ch;
+  opacity: 0.8;
+  font-weight: bold;
 }
 
 .highlight.red { color: #ea4335; font-weight: 700; }
@@ -161,7 +179,7 @@
   width:60%;     
   background-color: #EA4335;              
   margin: -40px auto 80px auto; 
-  opacity: 0.7;
+  opacity: 1 !important;
 }
 
 .footer {
@@ -175,10 +193,13 @@
     padding: 2rem 2.5rem;
   }
 
-  .waves img {
-    width: 210%;
-    transform: translateX(-25%);
-    object-fit: cover;
+    .waves img {
+    width: 220%;
+    max-width: none;
+    transform: translateX(-35%);
+    object-fit: contain;
+    height: auto;
+    display: block;
   }
 
   .content-grid,
@@ -217,7 +238,7 @@
     object-fit: contain;
   }
 
-  .content-grid .content-body {
+ .content-grid .content-body p:not(:has(.faq-question)){
     font-size: 1rem;
     line-height: 1.4;
     max-width: 600px;
@@ -262,10 +283,12 @@
   }
 
   .waves img {
-    width: 400%;
+    width: 450%;
     max-width: none;
-    transform: translateX(-40%);
+    transform: translateX(-42%);
     object-fit: cover;
+    height: auto;
+    display: block;
   }
 
   .content-grid,
@@ -315,7 +338,7 @@
     text-align: center;
   }
 
-  .content-grid .content-body p {
+ .content-grid .content-body p:not(:has(.faq-question)){
     margin: 0.4rem auto;
     opacity: 0.8;
   }
