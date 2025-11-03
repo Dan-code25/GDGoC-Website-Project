@@ -243,7 +243,7 @@ function Navbar() {
 
             {/* Other Sections */}
             <div
-              className={`${styles.otherSection} d-flex flex-column align-items-center`}
+              className={`${styles.otherSection} d-flex flex-column align-items-center gap-5`}
             >
               <Link to="/" className={styles.home} onClick={handleNavClick}>
                 Home
@@ -277,6 +277,8 @@ function Navbar() {
               <Link to="/team" className={styles.team} onClick={handleNavClick}>
                 Team
               </Link>
+            </div>
+            <div className='d-flex flex-column gap-4'>
               <button
                 className={styles.joinButton}
                 onClick={() =>

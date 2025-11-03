@@ -54,7 +54,6 @@
   transform-origin: left;
   overflow: visible;
   font-size: 18px;
-  margin-bottom: 40px;
 }
 
 .events svg {
@@ -77,7 +76,7 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
-  margin-bottom: 40px;
+
 }
 
 .home:hover {
@@ -93,7 +92,6 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
-  margin-bottom: 40px;
 }
 
 .project:hover {
@@ -109,7 +107,6 @@
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
-  margin-bottom: 40px;
 }
 
 .team:hover {
@@ -129,7 +126,6 @@
   display: inline-block;
   transform-origin: left;
   color: #202124;
-  margin-bottom: 25px;
 }
 
 .loginButton{
@@ -275,14 +271,13 @@
   .project,
   .team {
     font-size: 16px;
-    margin-bottom: 60px;
+    margin: 0;
   }
 
   .joinButton {
     padding: 3px 20px;
     font-size: 16px;
     border-radius: 7px;
-    margin-bottom: 40px;
   }
 
   .loginButton{
