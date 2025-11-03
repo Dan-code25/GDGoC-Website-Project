@@ -20,9 +20,9 @@
 }
 
 .slideshow-wrap {
-  width: 100vw;  
+  width: 100%;  
   margin: 0;      
-  overflow: visible;
+  overflow: hidden;
   position: relative; 
 
 }
@@ -130,7 +130,7 @@
 .arrow-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(71%);
+  transform: translateY(42%);
   width: 100px;
   height: 100px;
   border: none;
@@ -154,7 +154,7 @@
   border-top: 4px solid rgba(234, 67, 53, 0.3);
   border-right: 4px solid rgba(234, 67, 53, 0.3);
   transition: border-color 0.3s ease, transform 0.3s ease;
-  z-index: 3; /* ADD THIS */
+  z-index: 3; 
 }
 
 .arrow-btn.prev::after { transform: rotate(-135deg); }
@@ -232,14 +232,13 @@
   flex-wrap: wrap;   
   padding: 35px 0;
   background: #f3f4f6;
-  width: 100vw;    
+  width: 100%;    
   margin: 0;       
 }
 
 .sponsors img {
   height: 38px;
   object-fit: contain;
-  cursor: pointer;
 }
 
 
@@ -251,30 +250,36 @@
   }
 
  .arrow-btn{
-    top:20%;
+    top:22%;
   }
 
   .overlay {
-    top: 36%;
+    top: 35%;
   }
 
   .arrow-btn::before {
   height: 520px; 
+  width:140px;
   }
 
+  .arrow-btn::after {
+  width: 16px;
+  height: 16px;
+}
+
   .overlay h1 {
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.3;
     font-weight: 900;
   }
 
   .overlay p {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .btn-primary {
-    font-size: 12px;
-    padding: 10px 35px;
+    font-size: 10px;
+    padding: 10px 30px;
   }
 
   .sponsors {
@@ -295,25 +300,30 @@
   }
 
  .arrow-btn{
-    top:23%;
+    top:23.5%;
   }
 
  .overlay {
-    top: 40%;
+    top: 42%;
   }
 
   .arrow-btn::before {
   height: 500px; 
+  width:150px;
   }
 
+  .arrow-btn::after {
+  width: 18px;
+  height: 18px;
+}
   .overlay h1 {
-    font-size: 27px;
+    font-size: 26px;
     line-height: 1.3;
     font-weight: 900;
   }
 
   .overlay p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .btn-primary {
@@ -338,7 +348,7 @@
   }
 
   .arrow-btn{
-    top:28%;
+    top:27%;
   }
 
  .overlay {
@@ -346,7 +356,7 @@
   }
 
   .arrow-btn::before {
-    height: 620px; 
+    height: 600px; 
   }
 
   .overlay h1 {
@@ -379,7 +389,7 @@
   }
 
   .arrow-btn{
-    top:28%;
+    top:27%;
   }
 
  .overlay {
@@ -420,7 +430,7 @@
   }
 
   .arrow-btn{
-    top:27.5%;
+    top:27%;
   }
 
  .overlay {

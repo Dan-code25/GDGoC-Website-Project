@@ -66,7 +66,7 @@ export default function Slideshow() {
   
 
   return (
-    <div>
+ <div>
       <Navbar />
       <section className="slideshow-wrap">
         <div className="global-anim-overlay">
@@ -146,7 +146,7 @@ export default function Slideshow() {
             
           </div>
         </div>
-      </section>
+     
         {/* sponsors row */}
         <div className="sponsors">
           <img
@@ -162,6 +162,7 @@ export default function Slideshow() {
             onMouseLeave={() => setIsGithubHover(false)}
           />
         </div>
+        </section>
         <Discover/>
         <Footer />
       
