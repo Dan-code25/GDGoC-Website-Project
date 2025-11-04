@@ -28,7 +28,7 @@ function Project(){
         header = "Explore our Project"
         subtext = {
           <>
-            Explore tech excellence with GDSC TUP Manila! Join us for <span className={heroStyles.highlight1}>innovative projects</span>, <span className={heroStyles.highlight2}>tech excellence</span>, <span className={heroStyles.highlight3}>vibrant events</span>, and a <span className={heroStyles.highlight4}>dynamic community</span>. Elevate your skills and be part of shaping the future together!
+            Explore tech excellence with GDGoC TUP Manila! Join us for <span className={heroStyles.highlight1}>innovative projects</span>, <span className={heroStyles.highlight2}>tech excellence</span>, <span className={heroStyles.highlight3}>vibrant events</span>, and a <span className={heroStyles.highlight4}>dynamic community</span>. Elevate your skills and be part of shaping the future together!
           </>
         }
       />
@@ -36,7 +36,7 @@ function Project(){
       <ProjectCard 
         image = {websiteProjectImg}
         title = "GDGoC TUPM - Official Website"
-        description = "Welcome to the Google Developer Student Club - TUP Manila website. Immerse yourself in a community of dedicated members, uncover a diverse array of services, and actively engage in the development of unforgettable projects!"
+        description = "Welcome to the Google Developer Groups on Campus - TUP Manila website. Immerse yourself in a community of dedicated members, uncover a diverse array of services, and actively engage in the development of unforgettable projects!"
       />
       <div className={`${styles.container1} d-md-none d-flex`}>
         <img src={stayTunedMobile} alt="stay-tuned" />

@@ -15,7 +15,7 @@ export default function ChatbotOverlay() {
           position: 'fixed',
           right: 20,
           bottom: 20,
-          zIndex: 1500,
+          zIndex: 999,
           width: 56,
           height: 56,
           borderRadius: 999,

@@ -34,7 +34,7 @@ function Team(){
         header = "Welcome to the Team!"
         subtext = {
           <>
-            The <span className={heroStyles.highlight1}>team</span> that <span className={heroStyles.highlight2}>empowers</span>, <span className={heroStyles.highlight3}>enlightens</span>, and <span className={heroStyles.highlight4}>nurtures</span> student developers at <br />TUP Manila for the 2023-2024 academic year!
+            The <span className={heroStyles.highlight1}>team</span> that <span className={heroStyles.highlight2}>empowers</span>, <span className={heroStyles.highlight3}>enlightens</span>, and <span className={heroStyles.highlight4}>nurtures</span> student developers at <br />TUP Manila for the current academic year!
           </>
         }
       />
