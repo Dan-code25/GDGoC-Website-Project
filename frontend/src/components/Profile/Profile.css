@@ -401,8 +401,6 @@
 .profile-actions .exitBtn,
 .profile-actions .logOut {
   position: static;
-  width: 24px;
-  height: 24px;
   margin: 0 !important;
   pointer-events: auto;
 }
@@ -411,6 +409,10 @@
 @media (min-width: 1201px) {
     .profile-actions .exitBtn {
         display: none !important;
+    }
+
+    .profile-actions .logOut:hover {
+        width: 115px;    
     }
 }
 
