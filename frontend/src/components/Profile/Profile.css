@@ -27,7 +27,7 @@
 .name h4 {
     font-weight: 800;
     font-size: 2rem;
-    font-family: 'Works Sans', sans-serif;
+    font-family: 'product-sans', sans-serif;
     margin: 0;
 }
 
@@ -87,12 +87,12 @@
     font-size: 1.8rem;
     font-weight: 800;
     margin: 0;
-    font-family: 'Works Sans', sans-serif;
+    font-family: 'product-sans', sans-serif;
     color: hsla(0, 0%, 0%, 0.44);
 }
 
 .gdgID{
-    font-family: 'Works Sans', sans-serif;
+    font-family: 'product-sans', sans-serif;
     font-size: 2rem;
     font-weight: 800;
     color: hsla(225, 6%, 13%, 0.74);
@@ -101,6 +101,7 @@
 }
 
 .change-password-button{
+    font-family: 'product-sans', sans-serif;
     margin-top: 10px;
     padding: 8px 16px;
     font-size: 1rem;
@@ -295,7 +296,7 @@
 
 .logoutText{
     content: 'SIGN OUT';
-    font-family: product-sans, sans-serif;
+    font-family: 'product-sans', sans-serif;
     font-weight: bold;
     font-size: 14px;
     white-space: nowrap;
