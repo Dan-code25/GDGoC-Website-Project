@@ -24,7 +24,7 @@
   padding: 0 15px;     
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   pointer-events: none; 
   z-index: 3;
 }
@@ -408,6 +408,7 @@
     }
 
     .profile-actions { 
+        justify-content: space-between;
         top: 10px; 
         padding: 0 12px;
         height: 30px; 
@@ -518,7 +519,7 @@
     }
 
     /* Disable hover expansion */
-    .logOut:hover {
+    /* .logOut:hover {
         width: auto;
         background-color: hsl(5, 81%, 46%);
         transform: scale(1.05);
@@ -526,7 +527,7 @@
 
     .logOut:hover .logoutIcon {
         margin-left: 0;
-    }
+    } */
 
 
     .change-password-button{
@@ -553,6 +554,7 @@
     }
 
     .profile-actions { 
+        justify-content: space-between;
         top: 8px; 
         padding: 0 10px; 
         height: 26px; 
@@ -670,7 +672,7 @@
     }
 
     /* Disable hover expansion */
-    .logOut:hover,
+    /* .logOut:hover,
     .logOut:active {
         width: auto;
         background-color: hsl(5, 81%, 46%);
@@ -680,7 +682,7 @@
     .logOut:hover .logoutIcon,
     .logOut:active .logoutIcon {
         margin-left: 0;
-    }
+    } */
 
     .change-password-button{
         white-space: nowrap;
