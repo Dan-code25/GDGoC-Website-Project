@@ -278,7 +278,7 @@ function Navbar() {
                 Team
               </Link>
             </div>
-            <div className='d-flex flex-column gap-4'>
+            <div className="d-flex flex-column gap-4">
               <button
                 className={styles.joinButton}
                 onClick={() =>
@@ -287,19 +287,17 @@ function Navbar() {
               >
                 JOIN US
               </button>
-              <button
-                className={styles.loginButton}
-                onClick={(e) => {
-                  closeSidebar();
-                  if (gdgID) {
-                    setShowProfile(true);
-                  } else {
+              {!gdgID && (
+                <button
+                  className={styles.loginButton}
+                  onClick={(e) => {
+                    closeSidebar();
                     setShowLogin(true);
-                  }
-                }}
-              >
-                LOGIN
-              </button>
+                  }}
+                >
+                  LOGIN
+                </button>
+              )}
             </div>
           </div>
         </div>
