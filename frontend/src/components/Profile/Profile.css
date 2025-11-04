@@ -426,7 +426,6 @@
 @media (max-width: 1200px) {
 
     .profile-actions { top: 10px; padding: 0 12px; height: 30px; }
-    .profile-actions .exitBtn { width: 20px; height: 20px; }
     
     .profile-container {
         width: 100%;
@@ -447,7 +446,7 @@
         height: 30px; 
     }
 
-    .exitBtn { 
+    .profile-actions .exitBtn { 
         width: 15px; 
         height: 15px; 
     }
@@ -588,7 +587,6 @@
 @media (max-width: 700px){
 
     .profile-actions { top: 8px; padding: 0 10px; height: 26px; }
-    .profile-actions .exitBtn { width: 18px; height: 18px; }
 
     .profile-container {
         width: 95%;
@@ -610,7 +608,7 @@
         height: 26px; 
     }
     
-    .exitBtn { 
+    .profile-actions .exitBtn { 
         width: 10px;
         height: 10px; 
     }
