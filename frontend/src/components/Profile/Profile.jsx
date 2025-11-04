@@ -60,7 +60,7 @@ function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
 
                 <div className="name">
                     <h4>
-                        {firstName}, {lastName}
+                        {firstName} {lastName}
                     </h4>
                 </div>
                 <div className="inner-container">

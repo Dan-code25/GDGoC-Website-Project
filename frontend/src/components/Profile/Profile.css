@@ -414,10 +414,8 @@
         margin: 18px 0px 0px 5px;
     }
     
-    .ph--triangle-fill {
-        top: -50px;
-        width: 30px;
-        height: 30px;
+    .profile-container .ph--triangle-fill {
+        display: none !important;
     }
 
     .logOut{
@@ -440,11 +438,6 @@
         right: 15px;
     }
 
-    /* .logOut .profile .logoutIcon {
-        width: 20px;
-        height: 20px;
-        margin: 0, 0, 0, 0;
-    } */
 
     .logOut .logoutIcon {
         width: 15px;
@@ -563,10 +556,8 @@
         margin: 14px 0px 0px 4px;
     }
     
-    .ph--triangle-fill {
-        top: -40px;
-        width: 25px;
-        height: 25px;
+    .profile-container .ph--triangle-fill {
+        display: none !important;
     }
 
     .logOut {
