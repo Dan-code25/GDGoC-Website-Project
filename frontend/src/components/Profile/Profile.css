@@ -423,7 +423,7 @@
     .logOut{
         width: auto; 
         height: 25px;
-        padding: 3px 5px;
+        padding: 5px 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -454,7 +454,7 @@
 
     .logoutText{
         display: inline; 
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 600;
         transform: translateX(0);
     }
@@ -572,7 +572,7 @@
     .logOut {
         width: auto; 
         height: 20px;
-        padding: 2px 3px;
+        padding: 3px 5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -597,7 +597,7 @@
 
     .logoutText {
         display: inline; 
-        font-size: 5px;
+        font-size: 8px;
         font-weight: 600;
         transform: translateX(0);
     }
