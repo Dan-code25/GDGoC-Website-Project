@@ -399,7 +399,7 @@
 }
 
 .profile-actions .exitBtn,
-.profile-actions .logOut {
+.profile-actions .logOut .profile{
   position: static;
   width: 24px;
   height: 24px;
