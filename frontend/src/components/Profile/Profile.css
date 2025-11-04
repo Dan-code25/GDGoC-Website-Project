@@ -414,8 +414,8 @@
     }
 
     .exitBtn { 
-        width: 20px; 
-        height: 20px; 
+        width: 15px; 
+        height: 15px; 
     }
 
     .user-name-id .gdgID,
@@ -477,7 +477,7 @@
     .logOut{
         width: auto; 
         height: 25px;
-        padding: 5px 8px;
+        padding: 3px 5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -495,28 +495,29 @@
     }
 
 
-    .logOut .logoutIcon {
+    .profile-actions .logOut .logoutIcon {
         width: 15px;
         height: 15px;
         margin: 0;
     }
 
-    .logoutText{
+    .profile-actions .logoutText{
         display: inline; 
         font-size: 10px;
         font-weight: 600;
         transform: translateX(0);
     }
 
-    /* .logoutText::before {
+    
+    .profile-actions .logoutText::before {
         content: 'SIGN OUT'; 
-    } */
-
-    /* .logoutText::after {
-        content: '';
     }
 
-    
+    .profile-actions .logoutText::after {
+        content: ''; 
+    }
+
+    /* Disable hover expansion */
     .logOut:hover {
         width: auto;
         background-color: hsl(5, 81%, 46%);
@@ -524,9 +525,9 @@
     }
 
     .logOut:hover .logoutIcon {
-        margin-left: 0; 
+        margin-left: 0;
     }
-     */
+
 
     .change-password-button{
         white-space: nowrap;
@@ -558,8 +559,8 @@
     }
     
     .exitBtn { 
-        width: 18px;
-        height: 18px; 
+        width: 10px;
+        height: 10px; 
     }
 
     .name h4 {
@@ -660,15 +661,16 @@
         transform: translateX(0);
     }
 
-    /* .logoutText::before {
+    .logoutText::before {
         content: 'SIGN OUT'; 
     }
 
     .logoutText::after {
-        content: '';
-    } */
+        content: ''; 
+    }
 
-    /* .logOut:hover,
+    /* Disable hover expansion */
+    .logOut:hover,
     .logOut:active {
         width: auto;
         background-color: hsl(5, 81%, 46%);
@@ -677,8 +679,8 @@
 
     .logOut:hover .logoutIcon,
     .logOut:active .logoutIcon {
-        margin: 0;
-    } */
+        margin-left: 0;
+    }
 
     .change-password-button{
         white-space: nowrap;
