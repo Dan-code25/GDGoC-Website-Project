@@ -394,12 +394,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end; 
-  pointer-events: auto;
+  pointer-events: none;
   z-index: 3;
 }
 
 .profile-actions .exitBtn,
-.profile-actions .logOutProfile {
+.profile-actions .logOut {
   position: static;
   width: 24px;
   height: 24px;
