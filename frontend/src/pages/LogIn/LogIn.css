@@ -214,6 +214,16 @@
 }
 
 
+.profile-actions .exitBtn {
+    margin-left: 15px !important;
+}
+
+/* Disable triangle Btn in tablet and mobile screen */
+@media (max-width: 1200px) {
+    .login-container .ph--triangle-fill {
+        display: none !important;
+    }
+}
 
 /* Tablet Size */
 @media (max-width: 1200px) {
