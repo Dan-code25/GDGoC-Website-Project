@@ -15,7 +15,7 @@
     z-index: 11;
 }
 
-.profile-actions {
+/* .profile-actions {
   position: absolute;
   top: 10px;            
   left: 0;
@@ -32,7 +32,7 @@
 .profile-actions .exitBtn,
 .profile-actions .logOut {
   pointer-events: auto; 
-}
+} */
 
 .name {
     margin-top: 15px;
@@ -393,7 +393,7 @@
   padding: 0 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* exit left, sign-out right */
+  justify-content: flex-end; /* exit left, sign-out right */
   pointer-events: none;
   z-index: 3;
 }
