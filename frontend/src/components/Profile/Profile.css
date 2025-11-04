@@ -393,13 +393,13 @@
   padding: 0 15px;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* exit left, sign-out right */
+  justify-content: flex-end; 
   pointer-events: none;
   z-index: 3;
 }
 
 .profile-actions .exitBtn,
-.profile-actions .logOut .profile{
+.profile-actions .logOutProfile {
   position: static;
   width: 24px;
   height: 24px;

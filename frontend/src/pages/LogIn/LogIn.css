@@ -345,14 +345,16 @@
     }
 
     .login-container .profile-actions {
-        top: 8px;         
-        padding: 0 10px;   
+        top: 10px;              
+        padding-left: 12px;     
+        padding-right: 12px;    
         height: 26px;
     }
 
     .login-container .profile-actions .exitBtn {
         width: 12px;       
-        height: 12px;    
+        height: 12px;
+        margin-left: 0;    
     }
 
     .IdContainer,

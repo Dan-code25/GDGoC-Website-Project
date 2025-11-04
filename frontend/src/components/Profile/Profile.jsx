@@ -55,7 +55,7 @@ function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
 
                 <div className="profile-actions">
                     <span className="exitBtn" onClick={handleExit} />
-                    <div className="logOut profile" onClick={handleSignOut} role="button">
+                    <div className="logOutProfile" onClick={handleSignOut} role="button">
                         <span className="logoutText"></span>
                         <span className="logoutIcon"></span>
                     </div>
