@@ -445,7 +445,10 @@
         font-size: 10px;
     }
     
-
+    .change-password-button{
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -574,5 +577,10 @@
 
     .logOut:hover .logoutIcon {
         margin: 0;
+    }
+
+    .change-password-button{
+        white-space: nowrap;
+        font-size: 0.5rem;
     }
 }
