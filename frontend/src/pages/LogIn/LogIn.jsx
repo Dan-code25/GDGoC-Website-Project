@@ -70,7 +70,14 @@ function LogIn({ onClose, isClosing }) {
             >
                 <div className='login-container' onClick={(e) => e.stopPropagation()}                                   >
                     <AnimationBackground />
+                    
                     <button className='ph--triangle-fill' onClick={handleExit}></button>
+                    
+                    {/* Profile Actions - Same uses in profile exitBtn*/}
+                    <div className="profile-actions">
+                        <span className="exitBtn" onClick={handleExit} />
+                    </div>
+
                     <div className="LogIn">
                         <h1>Log in</h1>
                         <p className="greet">Hello, welcome back to your account</p>
