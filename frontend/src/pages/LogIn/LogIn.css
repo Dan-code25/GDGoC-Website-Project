@@ -215,6 +215,28 @@
     border: none;
 }
 
+/* Shared actions bar + exit alignment */
+.login-container .profile-actions {
+  position: absolute;
+  top: 10px;
+  left: 0; right: 0;
+  height: 32px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  pointer-events: none;
+  z-index: 3;
+}
+
+.login-container .profile-actions .exitBtn {
+  position: static; 
+  width: 24px;
+  height: 24px;
+  margin: 0 !important;        
+  pointer-events: auto;         
+}
+
 
 /* Disable triangle Btn in tablet and mobile screen */
 @media (max-width: 1200px) {
@@ -250,8 +272,14 @@
         margin-top: 0px;
     }
 
-    .profile-actions .exitBtn {
-        margin-left: 10px !important;
+    .login-container .profile-actions {
+        top: 10px;
+        padding: 0 12px;
+        height: 30px;
+    }
+    .login-container .profile-actions .exitBtn {
+        width: 20px;
+        height: 20px;
     }
 
     .IdContainer,
@@ -316,8 +344,14 @@
         margin-top: 0px;
     }
 
-    .profile-actions .exitBtn {
-        margin-left: 8px !important;
+    .login-container .profile-actions {
+        top: 8px;
+        padding: 0 10px;
+        height: 26px;
+    }
+    .login-container .profile-actions .exitBtn {
+        width: 18px;
+        height: 18px;
     }
 
     .IdContainer,

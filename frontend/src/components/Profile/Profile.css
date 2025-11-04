@@ -385,6 +385,27 @@
   }
 }
 
+.profile-actions {
+  position: absolute;
+  top: 10px;
+  left: 0; right: 0;
+  height: 32px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* exit left, sign-out right */
+  pointer-events: none;
+  z-index: 3;
+}
+
+.profile-actions .exitBtn {
+  position: static;
+  width: 24px;
+  height: 24px;
+  margin: 0 !important;
+  pointer-events: auto;
+}
+
 /* Desktop: hide X button, show triangle exit instead */
 @media (min-width: 1201px) {
     .profile-actions .exitBtn {
@@ -403,6 +424,10 @@
 
 /* Tablet Size: Column-Layout */
 @media (max-width: 1200px) {
+
+    .profile-actions { top: 10px; padding: 0 12px; height: 30px; }
+    .profile-actions .exitBtn { width: 20px; height: 20px; }
+    
     .profile-container {
         width: 100%;
         height: auto;
@@ -561,6 +586,10 @@
 
 /* Mobile Size: Column-Layout */
 @media (max-width: 700px){
+
+    .profile-actions { top: 8px; padding: 0 10px; height: 26px; }
+    .profile-actions .exitBtn { width: 18px; height: 18px; }
+
     .profile-container {
         width: 95%;
         height: auto;
