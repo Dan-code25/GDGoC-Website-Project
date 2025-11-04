@@ -1,4 +1,3 @@
-/* Abstract background shape for light gradient effect */
 
 .profile-container {
     height: 500px;
@@ -16,24 +15,23 @@
     z-index: 11;
 }
 
-/* Actions bar to align exit and sign out */
 .profile-actions {
   position: absolute;
-  top: 10px;            /* same vertical line for both */
+  top: 10px;            
   left: 0;
   right: 0;
   height: 32px;
-  padding: 0 15px;      /* match right/left gaps */
+  padding: 0 15px;     
   display: flex;
   align-items: center;
   justify-content: space-between;
-  pointer-events: none; /* let children handle clicks */
+  pointer-events: none; 
   z-index: 3;
 }
 
 .profile-actions .exitBtn,
 .profile-actions .logOut {
-  pointer-events: auto; /* clickable */
+  pointer-events: auto; 
 }
 
 .name {
@@ -182,17 +180,16 @@
 }
 
 
-/* When profile icon isClicked */
 
 .profile-modal-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 110; /* Make sure it appears above other content */
+    z-index: 110; 
     animation: slideInUp 0.3s ease-out forwards;
 }
 
-/* exit animation */
+
 .profile-exit {
   animation: slideOutUp 0.3s ease-in forwards;
 }
@@ -209,10 +206,9 @@
     align-items: center;
     justify-content: center;
 
-    background: rgba(0,0,0,0.2); /* Optional: for a modal overlay effect */
+    background: rgba(0,0,0,0.2); 
     z-index: 2000 !important;
 }
-
 
 
 /* Camera Icon */
@@ -264,7 +260,6 @@
 /* THIS IS FOR SIGN OUT */
 
 .logOut{
-    /* position: absolute; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,8 +273,8 @@
     color: black; 
 
     width: 40px;
-    transform-origin: right center; /* anchor expansion to the right */
-    transition: width 0.6s ease; /* smooth expansion */
+    transform-origin: right center; 
+    transition: width 0.6s ease; 
     overflow: hidden;
 }
 
@@ -343,12 +338,11 @@
 
 
 .exitBtn {
-  position: static;     /* let flex place it */
+  position: static;    
   width: 24px;
   height: 24px;
   background: none;
   border: none;
-  /* your SVG mask styles */
   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M1.707.293A1 1 0 0 0 .293 1.707L5.586 7L.293 12.293a1 1 0 1 0 1.414 1.414L7 8.414l5.293 5.293a1 1 0 0 0 1.414-1.414L8.414 7l5.293-5.293A1 1 0 0 0 12.293.293L7 5.586z' clip-rule='evenodd'/%3E%3C/svg%3E");
   background-color: currentColor;
   -webkit-mask-image: var(--svg);
@@ -365,7 +359,7 @@
 }
 
 .profile-actions .logOut.profile {
-  position: static;     /* flex places it on the right */
+  position: static;     
 }
 
 
@@ -391,6 +385,12 @@
   }
 }
 
+/* Desktop: hide X button, show triangle exit instead */
+@media (min-width: 1201px) {
+    .profile-actions .exitBtn {
+        display: none !important;
+    }
+}
 
 
 /* Tablet Size: Column-Layout */
@@ -654,7 +654,7 @@
         margin: 0;
     }
 
-    .logoutText {
+    .profile-actions .logoutText {
         display: inline; 
         font-size: 8px;
         font-weight: 600;
