@@ -392,6 +392,14 @@
     }
 }
 
+/* Disable triangle Btn in tablet and mobile screen */
+@media (max-width: 1200px) {
+    .login-container .ph--triangle-fill {
+        display: none !important;
+    }
+}
+
+
 
 /* Tablet Size: Column-Layout */
 @media (max-width: 1200px) {

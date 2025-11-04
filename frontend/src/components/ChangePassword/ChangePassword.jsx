@@ -69,6 +69,8 @@ function ChangePassword({ onClose, isClosing }) {
                     <AnimationBackground />
                     <div className="ChangePassword">
 
+                        <button className='ph--triangle-fill' onClick={handleExit}></button>
+
                         {/* Profile Actions - Same uses in profile exitBtn*/}
                         <div className="profile-actions">
                             <span className="exitBtn" onClick={handleExit} />
