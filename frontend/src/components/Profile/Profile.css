@@ -285,7 +285,7 @@
 }
 
 .logOut.profile {
-  position: absolute;
+  position: static;
   top: 23px;
   right: 25px;
 }
@@ -475,7 +475,9 @@
         display: none !important;
     }
 
-    .logOut{
+    .logOut,
+    #sideBar .logOut,
+    .profile-actions .logOut{
         width: auto; 
         height: 25px;
         padding: 3px 5px;
@@ -496,13 +498,17 @@
     }
 
 
+    .logOut .logoutIcon,
+    #sideBar .logOut .logoutIcon,
     .profile-actions .logOut .logoutIcon {
         width: 15px;
         height: 15px;
         margin: 0;
     }
 
-    .profile-actions .logoutText{
+    .logOut .logoutText,
+    #sideBar .logOut .logoutText,
+    .profile-actions .logOut .logoutText{
         display: inline; 
         font-size: 10px;
         font-weight: 600;
@@ -510,24 +516,31 @@
     }
 
     
-    .profile-actions .logoutText::before {
+    .logOut .logoutText::before,
+    #sideBar .logOut .logoutText::before,
+    .profile-actions .logOut .logoutText::before {
         content: 'SIGN OUT'; 
     }
 
-    .profile-actions .logoutText::after {
+    .logOut .logoutText::after,
+    #sideBar .logOut .logoutText::after,
+    .profile-actions .logOut .logoutText::after{
         content: ''; 
     }
 
-    /* Disable hover expansion */
-    /* .logOut:hover {
-        width: auto;
+    .logOut:hover,
+    #sideBar .logOut:hover,
+    .profile-actions .logOut:hover {
+        width: auto !important;
         background-color: hsl(5, 81%, 46%);
         transform: scale(1.05);
     }
 
-    .logOut:hover .logoutIcon {
+    .logOut:hover .logoutIcon,
+    #sideBar .logOut:hover .logoutIcon,
+    .profile-actions .logOut:hover .logoutIcon {
         margin-left: 0;
-    } */
+    }
 
 
     .change-password-button{
@@ -630,7 +643,9 @@
         display: none !important;
     }
 
-    .logOut {
+    .logOut,
+    #sideBar .logOut,
+    .profile-actions .logOut {
         width: auto; 
         height: 20px;
         padding: 3px 5px;
@@ -650,39 +665,55 @@
         right: 12px;
     }
 
-    .logOut .logoutIcon {
+    .logOut .logoutIcon,
+    #sideBar .logOut .logoutIcon,
+    .profile-actions .logOut .logoutIcon {
         width: 12px;
         height: 12px;
         margin: 0;
     }
 
-    .profile-actions .logoutText {
+    .logOut .logoutText,
+    #sideBar .logOut .logoutText,
+    .profile-actions .logOut .logoutText {
         display: inline; 
         font-size: 8px;
         font-weight: 600;
         transform: translateX(0);
     }
 
-    .logoutText::before {
+    .logOut .logoutText::before,
+    #sideBar .logOut .logoutText::before,
+    .profile-actions .logOut .logoutText::before {
         content: 'SIGN OUT'; 
     }
 
-    .logoutText::after {
-        content: ''; 
+    .logOut .logoutText::after,
+    #sideBar .logOut .logoutText::after,
+    .profile-actions .logOut .logoutText::after {
+        content: '';
     }
 
-    /* Disable hover expansion */
-    /* .logOut:hover,
-    .logOut:active {
-        width: auto;
+    /* Disable hover expansion on mobile */
+    .logOut:hover,
+    .logOut:active,
+    #sideBar .logOut:hover,
+    #sideBar .logOut:active,
+    .profile-actions .logOut:hover,
+    .profile-actions .logOut:active {
+        width: auto !important;
         background-color: hsl(5, 81%, 46%);
         transform: scale(1.05);
     }
 
     .logOut:hover .logoutIcon,
-    .logOut:active .logoutIcon {
+    .logOut:active .logoutIcon,
+    #sideBar .logOut:hover .logoutIcon,
+    #sideBar .logOut:active .logoutIcon,
+    .profile-actions .logOut:hover .logoutIcon,
+    .profile-actions .logOut:active .logoutIcon {
         margin-left: 0;
-    } */
+    }
 
     .change-password-button{
         white-space: nowrap;
