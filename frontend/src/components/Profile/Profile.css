@@ -422,8 +422,8 @@
 
     .logOut{
         width: auto; 
-        height: 30px;
-        padding: 4px 12px;
+        height: 25px;
+        padding: 3px 5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -447,14 +447,14 @@
     } */
 
     .logOut .logoutIcon {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
         margin: 0;
     }
 
     .logoutText{
         display: inline; 
-        font-size: 11px;
+        font-size: 8px;
         font-weight: 600;
         transform: translateX(0);
     }
@@ -571,8 +571,8 @@
 
     .logOut {
         width: auto; 
-        height: 24px;
-        padding: 3px 10px;
+        height: 20px;
+        padding: 2px 3px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -590,14 +590,14 @@
     }
 
     .logOut .logoutIcon {
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
         margin: 0;
     }
 
     .logoutText {
         display: inline; 
-        font-size: 9px;
+        font-size: 5px;
         font-weight: 600;
         transform: translateX(0);
     }
