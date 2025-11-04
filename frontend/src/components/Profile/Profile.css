@@ -398,7 +398,8 @@
   z-index: 3;
 }
 
-.profile-actions .exitBtn {
+.profile-actions .exitBtn,
+.profile-actions .logOut {
   position: static;
   width: 24px;
   height: 24px;
