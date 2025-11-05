@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
 import Discover from "../Discover/discover.jsx";
 
-/* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
 import slide_default_2 from "../../assets/home-images/slide_default_2.png";
 import slide_default_3 from "../../assets/home-images/slide_default_3.png";
@@ -146,7 +145,7 @@ export default function Slideshow() {
             
           </div>
         </div>
-     
+        </section>
         {/* sponsors row */}
         <div className="sponsors">
           <img
@@ -162,7 +161,7 @@ export default function Slideshow() {
             onMouseLeave={() => setIsGithubHover(false)}
           />
         </div>
-        </section>
+        
         <Discover/>
         <Footer />
       
