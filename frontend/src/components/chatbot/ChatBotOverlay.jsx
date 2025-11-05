@@ -44,8 +44,18 @@ export default function ChatbotOverlay() {
             height: '60vh',
             maxHeight: 700,
             marginRight: 20,
-            transform: open ? 'translateX(0)' : 'translateX(120%)',
+            transform: open ? 'translateX(0%)' : 'translateX(120%)',
             transition: 'transform 0.7s cubic-bezier(0.34, 1.3, 0.5, 1)',
+          
+            ...(window.innerWidth <= 480
+              ? {
+                  right: 0,
+                  left: 0,
+                  margin: '0 auto',
+                  width: '90%',
+                  bottom: 70,
+                }
+              : {}),
           }}
         >
           <Chatbot onClose={() => setOpen(false)} />
