@@ -51,8 +51,7 @@ export default function ChatbotOverlay() {
               ? {
                   right: 0,
                   left: 0,
-                  margin: '0 auto',
-                  width: '100%',
+                  width: 360,
                   bottom: 90,
                 }
               : {}),
