@@ -65,29 +65,30 @@ export default function Slideshow() {
   
 
   return (
- <div>
+    <div>
       <Navbar />
       <section className="slideshow-wrap">
         <div className="global-anim-overlay">
           <AnimationBackground />
         </div>
 
-        <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+        <div
+          className="slideshow-track"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
           {slides.map((slide, index) => (
             <div
               className="slide"
               key={index}
-              style={{ backgroundImage: `url(${slide})` }} 
-            >
-
-            </div> 
-          ))} 
-
-        </div> 
+              style={{ backgroundImage: `url(${slide})` }}
+            ></div>
+          ))}
+        </div>
 
         <div className="overlay">
           <h1>
-            Connecting Student Developers<br/> with the Power of{" "}
+            Connecting Student Developers
+            <br /> with the Power of{" "}
             <span className="google">
               <span>G</span>
               <span>o</span>
@@ -95,43 +96,45 @@ export default function Slideshow() {
               <span>g</span>
               <span>l</span>
               <span>e</span>
-            </span> {" "} Technologies
-          </h1> 
+            </span>{" "}
+            Technologies
+          </h1>
 
           <p>
-            The official Google Developer Groups on Campus at 
-            <span className="tup"> <br/>
+            The official Google Developer Groups on Campus at
+            <span className="tup">
+              {" "}
+              <br />
               Technological University of the Philippines - Manila
             </span>
-          </p> 
+          </p>
 
           <button
-                className="btn-primary"
-                onClick={() => {
-                  const section = document.getElementById("discover-section");
-                  if (section) {
-                    section.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-            >
-                Discover GDGoC
+            className="btn-primary"
+            onClick={() => {
+              const section = document.getElementById("discover-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Discover GDGoC
           </button>
         </div>
 
-        <div >  
-          
+        <div>
           <button
-              className="arrow-btn prev"
-              onClick={goPrev}
-              aria-label="Previous slide"
-            />
+            className="arrow-btn prev"
+            onClick={goPrev}
+            aria-label="Previous slide"
+          />
 
-            <button
-              className="arrow-btn next"
-              onClick={goNext}
-              aria-label="Next slide"
-            />
-                
+          <button
+            className="arrow-btn next"
+            onClick={goNext}
+            aria-label="Next slide"
+          />
+
           {/* dots */}
           <div className="dots">
             {slides.map((_, i) => (

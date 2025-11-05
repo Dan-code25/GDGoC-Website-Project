@@ -130,7 +130,7 @@
 .arrow-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(42%);
+  transform: translateY(71%);
   width: 100px;
   height: 100px;
   border: none;
@@ -254,7 +254,7 @@
   }
 
   .overlay {
-    top: 35%;
+    top: 42%;
   }
 
   .arrow-btn::before {
@@ -300,7 +300,7 @@
   }
 
  .arrow-btn{
-    top:23.5%;
+    top:22%;
   }
 
  .overlay {
