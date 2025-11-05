@@ -12,7 +12,7 @@ const ai = new GoogleGenAI({ apiKey: API_KEY });
 
 // A single chat session for the entire user visit to maintain conversation history.
 const chat: Chat = ai.chats.create({
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   config: {
     systemInstruction: `You are a helpful and friendly AI assistant for a community called "Google Developer Groups on Campus - TUP Manila branch.". Your name is GooglerAI. 
 Answer questions based only on the provided knowledge base. Provide the full answer from the knowledge base. Always follow up with a relevant question. Be polite.
