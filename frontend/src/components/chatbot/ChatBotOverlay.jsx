@@ -44,14 +44,14 @@ export default function ChatbotOverlay() {
             height: '60vh',
             maxHeight: 700,
             marginRight: 20,
-            transform: open ? 'translateX(0%)' : 'translateX(120%)',
+            transform: open ? 'translateX(0)' : 'translateX(150%)',
             transition: 'transform 0.7s cubic-bezier(0.34, 1.3, 0.5, 1)',
           
-            ...(window.innerWidth <= 480
+            ...(window.innerWidth <= 639
               ? {
+                  transform: open ? 'translateX(5%)' : 'translateX(150%)',
                   right: 0,
-                  left: 0,
-                  width: 360,
+                  marginRight: 0,
                   bottom: 90,
                 }
               : {}),

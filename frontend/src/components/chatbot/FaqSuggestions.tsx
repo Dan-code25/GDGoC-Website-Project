@@ -14,7 +14,7 @@ const FaqSuggestions: React.FC<FaqSuggestionsProps> = ({ suggestions, onSuggesti
       </div>
       <div className="max-w-[75%]">
         <div className="mb-3">
-            <span className="bg-yellow-100 text-slate-800 text-sm px-2.5 py-1.5 rounded-full">
+            <span className="flex flex-col items-start bg-yellow-100 text-[14px] px-3 py-2 rounded-2xl shadow-sm">
             Frequently Asked Questions (FAQs)
             </span>
         </div>
