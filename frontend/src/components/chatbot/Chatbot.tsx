@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { streamChatResponse } from './services/geminiService';
 import { BOT_NAME, INITIAL_MESSAGE, FAQ_SUGGESTIONS } from './constants';
 import ChatBubble from './ChatBubble';
 import ChatInput from './ChatInput';
@@ -7,6 +6,7 @@ import FaqSuggestions from './FaqSuggestions';
 import { GooglerAiIcon, UserIcon, CloseIcon } from './Icons';
 import { Sender } from './types';
 import type { Message } from './types';
+import backend from '../../api/axios';
 
 interface ChatbotProps {
   onClose: () => void;
@@ -27,61 +27,33 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
   }, [messages, isLoading]);
   
   const handleSendMessage = useCallback(async (text: string) => {
-    if (isLoading || !text.trim()) return;
-
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
-      text,
-      sender: Sender.User,
-    };
-    
-    const botMessageId = `bot-${Date.now()}`;
-    const placeholderMessage: Message = {
-      id: botMessageId,
-      text: '',
-      sender: Sender.Bot,
-    };
-
-    setMessages(prev => [...prev, userMessage, placeholderMessage]);
-    setIsLoading(true);
     setError(null);
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      sender: Sender.User,
+      text,
+    };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+    setIsLoading(true);
 
     try {
-      const stream = streamChatResponse(text);
-      let fullResponse = '';
+      const response = await backend.post('/auth/chatbot', { message: text });
       
-      for await (const chunkText of stream) {
-        fullResponse += chunkText || '';
-      }
-
-      // This removes all asterisks from the response, cleaning up markdown formatting.
-      const cleanedResponse = fullResponse.replace(/\*/g, '');
-
-      setMessages(prev =>
-        prev.map(msg =>
-          msg.id === botMessageId ? { ...msg, text: cleanedResponse } : msg
-        )
-      );
-
-    } catch (err: unknown) {
-        const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred.';
-        setError(errorMessage);
-        const errorMessageObject: Message = {
-            id: `error-${Date.now()}`,
-            text: `Sorry, something went wrong: ${errorMessage}`,
-            sender: Sender.Bot,
-        };
-        setMessages(prev => {
-            const newMessages = prev.filter(msg => msg.id !== botMessageId);
-            return [...newMessages, errorMessageObject];
-        });
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        sender: Sender.Bot,
+        text: response.data.answer || response.data.response || 'No response from server',
+      };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    } catch (err) {
+      console.error('Chat error:', err);
+      setError('Failed to get response from the bot. Please try again.');
     } finally {
       setIsLoading(false);
     }
-  }, [isLoading]);
- 
+  }, []);
+
   return (
-    
     <div className="w-80 sm:w-96 h-[60vh] max-h-[700px] flex flex-col bg-red-500 rounded-2xl shadow-2xl overflow-hidden border-2 border-red-500">
       <header className="bg-red-500 text-white p-3 flex items-center justify-between gap-4 shadow-md flex-shrink-0">
         <div className="flex items-center gap-3">
