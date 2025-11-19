@@ -11,6 +11,8 @@ import facebook_1 from './home-images/facebook_1.png';
 import facebook_2 from './home-images/facebook_2.png';
 import github_1 from './home-images/github_1.png';
 import github_2 from './home-images/github_2.png';
+import technomancer_1 from './home-images/technomancer_1.png';
+import technomancer_2 from './home-images/technomancer_2.png';
 import gmail_1 from './home-images/gmail_1.png';
 import gmail_2 from './home-images/gmail_2.png';
 import instagram_1 from './home-images/instagram_1.png';
@@ -101,4 +103,6 @@ export const assets = {
   what_we_do,
   what_youll_get,
   who_we_are,
+  technomancer_1,
+  technomancer_2,
 };

@@ -23,6 +23,8 @@ import datacampBW from "../../assets/home-images/datacamp_1.png";
 import datacampColor from "../../assets/home-images/datacamp_2.png";
 import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
+import technomancerBW from "../../assets/home-images/technomancer_1.png";
+import technomancerColor from "../../assets/home-images/technomancer_2.png";
 import Chatbot from '../../components/chatbot/ChatBotOverlay';
 
 
@@ -52,6 +54,7 @@ export default function Slideshow() {
   
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
+  const [isTechnomancerHover, setIsTechnomancerHover] = useState(false);
 
   const navigate = useNavigate(); 
 
@@ -156,6 +159,12 @@ export default function Slideshow() {
             alt="Datacamp"
             onMouseEnter={() => setIsDatacampHover(true)}
             onMouseLeave={() => setIsDatacampHover(false)}
+          />
+            <img
+            src={isTechnomancerHover ? technomancerColor : technomancerBW}
+            alt="Technomancer"
+            onMouseEnter={() => setIsTechnomancerHover(true)}
+            onMouseLeave={() => setIsTechnomancerHover(false)}
           />
           <img
             src={isGithubHover ? githubColor : githubBW}
