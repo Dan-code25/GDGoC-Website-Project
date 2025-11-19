@@ -15,7 +15,7 @@ export default function ChatbotOverlay() {
           position: 'fixed',
           right: 20,
           bottom: 20,
-          zIndex: 1500,
+          zIndex: 999,
           width: 56,
           height: 56,
           borderRadius: 999,
@@ -26,12 +26,14 @@ export default function ChatbotOverlay() {
           justifyContent: 'center',
           boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
           padding: 0,
+          cursor: 'pointer',
+          transition: 'transform 0.3s ease',
         }}
       >
         <ChatIcon />
       </button>
 
-      {open && createPortal(
+      {createPortal(
         <div
           style={{
             position: 'fixed',
@@ -42,6 +44,17 @@ export default function ChatbotOverlay() {
             height: '60vh',
             maxHeight: 700,
             marginRight: 20,
+            transform: open ? 'translateX(0)' : 'translateX(150%)',
+            transition: 'transform 0.7s cubic-bezier(0.34, 1.3, 0.5, 1)',
+          
+            ...(window.innerWidth <= 639
+              ? {
+                  transform: open ? 'translateX(5%)' : 'translateX(150%)',
+                  right: 0,
+                  marginRight: 0,
+                  bottom: 90,
+                }
+              : {}),
           }}
         >
           <Chatbot onClose={() => setOpen(false)} />

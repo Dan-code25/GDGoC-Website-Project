@@ -1,10 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
 import Navbar from "../components/navigation-bar/Navbar";
 import Footer from "../components/footer-section/Footer";
 import "./Pages.css"; 
 import { assets } from "../assets/assets.js"; 
 
 const MembershipClosed = () => {
+
+  useEffect(() => {
+    document.title = "Membership Closed | GDGoC TUPM";
+  }, []);
+
   return (
     <>
     <Navbar />

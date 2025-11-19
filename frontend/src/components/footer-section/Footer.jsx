@@ -1,7 +1,11 @@
 import styles from "../footer-section/Footer.module.css";
-import logo from "../../assets/images/GDGOC logo.svg";
+import logo from "../../assets/images/GDGOC logo.png";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import gmailDefault from "../../assets/images/footer-images/GMAIL DEFAULT.svg";
+import gmailHover from "../../assets/images/footer-images/GMAIL HOVER.svg";
+import igDefault from "../../assets/images/footer-images/INSTAGRAM.svg";
+import igHover from "../../assets/images/footer-images/INSTAGRAM_HOVER.svg";
 
 function Footer(){
   const navigate = useNavigate();
@@ -13,64 +17,51 @@ function Footer(){
             <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Want to be part of our community? Have something in mind?</h3>
             <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center gap-3`}>
               <button className={styles.btnprimary} 
-                onClick={() => navigate("/MembershipClosed")}>
+                onClick={() =>  window.open("https://forms.gle/vfEcZzgwc1ugVaCTA", "_blank")}>
                 Join us!
               </button>
               <button className={styles.btnsecondary} 
-                onClick={() => navigate("/UnderConstruction")}>
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeGj3Hr-DPiiv1nc_7QdiKkWpH92Ry0ZMTYHdLxVDi-RXafGA/viewform", "_blank")}>
                 Message us!
               </button>
             </div>
         </div>
         <div className="d-flex flex-column align-items-center align-items-md-start">
           <h1 className={styles.footerTitle}>Keep up with us!</h1>
-          <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Join us on our digital adventures across various platforms!</h3>
+          <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Join us on our digital adventures across various platforms!</h3> 
+         
           {/* Social media buttons */}
           <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center`}>
-            <button className={styles.gmailButton}>
-              <svg width="50" height="40" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
-                <path className={styles.gmailBlue} d="M11.175 39.8031V19.3036L5.28328 13.4875L0 10.2599V36.1855C0 38.1872 1.50295 39.8031 3.35259 39.8031H11.175Z" />
-                <path className={styles.gmailGreen} d="M37.995 39.8031H45.8174C47.6726 39.8031 49.17 38.1811 49.17 36.1855V10.2601L43.1859 13.9569L37.995 19.3036V39.8031Z" />
-                <path className={styles.gmailRed} d="M11.175 19.3036L10.3733 11.2939L11.175 3.62777L24.585 14.4804L37.995 3.62777L38.8917 10.88L37.995 19.3036L24.585 30.1563L11.175 19.3036Z" />
-                <path className={styles.gmailYellow} d="M37.995 3.62777L37.995 19.3036L49.17 10.2601V5.43648C49.17 0.962902 44.4374 -1.58736 41.1242 1.09554L37.995 3.62777Z" />
-                <path className={styles.gmailDarkRed} d="M0 10.2599L11.175 19.3036V3.62777L8.04583 1.09557C4.72685 -1.58753 0 0.962932 0 5.4363V10.2599Z" />
-              </svg>
-            </button>
-            <button className={styles.facebookButton}>
+            <a className={styles.gmailButton}
+               href="https://mail.google.com/mail/?view=cm&to=gdsctupm@tup.edu.ph"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+              <img src={gmailDefault} alt="" className={styles.default}/>
+              <img src={gmailHover} alt="" className={styles.hovered}/>
+            </a>
+            <a className={styles.facebookButton}
+              href="https://www.facebook.com/GDGonCampusTUPManila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg width="42" height="40" viewBox="0 0 42 40" xmlns="http://www.w3.org/2000/svg">
                 <path d="M42 20.0501C42 8.98246 32.592 0 21 0C9.408 0 0 8.98246 0 20.0501C0 29.7544 7.224 37.8346 16.8 39.6992V26.0652H12.6V20.0501H16.8V15.0376C16.8 11.1679 20.097 8.02005 24.15 8.02005H29.4V14.0351H25.2C24.045 14.0351 23.1 14.9373 23.1 16.0401V20.0501H29.4V26.0652H23.1V40C33.705 38.9975 42 30.4561 42 20.0501Z"/>
               </svg>
-            </button>
-            <button className={styles.instagramButton}>
-              <svg
-                width="41"
-                height="40"
-                viewBox="0 0 41 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.7699 0H28.5699C34.9699 0 40.1699 5.2 40.1699 11.6V28.4C40.1699 31.4765 38.9478 34.427 36.7724 36.6024C34.5969 38.7779 31.6464 40 28.5699 40H11.7699C5.36992 40 0.169922 34.8 0.169922 28.4V11.6C0.169922 8.52349 1.39206 5.57298 3.56748 3.39756C5.74291 1.22214 8.69341 0 11.7699 0ZM11.3699 4C9.46036 4 7.62901 4.75857 6.27875 6.10883C4.92849 7.45909 4.16992 9.29044 4.16992 11.2V28.8C4.16992 32.78 7.38992 36 11.3699 36H28.9699C30.8795 36 32.7108 35.2414 34.0611 33.8912C35.4114 32.5409 36.1699 30.7096 36.1699 28.8V11.2C36.1699 7.22 32.9499 4 28.9699 4H11.3699ZM30.6699 7C31.333 7 31.9688 7.26339 32.4377 7.73223C32.9065 8.20107 33.1699 8.83696 33.1699 9.5C33.1699 10.163 32.9065 10.7989 32.4377 11.2678C31.9688 11.7366 31.333 12 30.6699 12C30.0069 12 29.371 11.7366 28.9022 11.2678C28.4333 10.7989 28.1699 10.163 28.1699 9.5C28.1699 8.83696 28.4333 8.20107 28.9022 7.73223C29.371 7.26339 30.0069 7 30.6699 7ZM20.1699 10C22.8221 10 25.3656 11.0536 27.241 12.9289C29.1164 14.8043 30.1699 17.3478 30.1699 20C30.1699 22.6522 29.1164 25.1957 27.241 27.0711C25.3656 28.9464 22.8221 30 20.1699 30C17.5178 30 14.9742 28.9464 13.0989 27.0711C11.2235 25.1957 10.1699 22.6522 10.1699 20C10.1699 17.3478 11.2235 14.8043 13.0989 12.9289C14.9742 11.0536 17.5178 10 20.1699 10ZM20.1699 14C18.5786 14 17.0525 14.6321 15.9273 15.7574C14.8021 16.8826 14.1699 18.4087 14.1699 20C14.1699 21.5913 14.8021 23.1174 15.9273 24.2426C17.0525 25.3679 18.5786 26 20.1699 26C21.7612 26 23.2873 25.3679 24.4126 24.2426C25.5378 23.1174 26.1699 21.5913 26.1699 20C26.1699 18.4087 25.5378 16.8826 24.4126 15.7574C23.2873 14.6321 21.7612 14 20.1699 14Z"
-                  fill="url(#paint0_linear)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="36.0032"
-                    y1="3.5"
-                    x2="6.50323"
-                    y2="40"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#9000DC" />
-                    <stop offset="0.359375" stopColor="#E41996" />
-                    <stop offset="0.708333" stopColor="#FE5762" />
-                    <stop offset="1" stopColor="#FECF1D" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </button>
-            <button className={styles.twitterButton}>
+            </a>
+            <a className={styles.instagramButton}
+                href="https://www.instagram.com/gdgoctup/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              <img src={igDefault} alt="" className={styles.default}/>
+              <img src={igHover} alt="" className={styles.hovered}/>  
+            </a>
+            <a className={styles.twitterButton}
+              href="https://x.com/GDSCTUPManila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="49"
                 height="40"
@@ -83,8 +74,12 @@ function Footer(){
                   fill="#1D9BF0"
                 />
               </svg>
-            </button>
-            <button className={styles.linkedinButton}>
+            </a>
+            <a className={styles.linkedinButton}
+                href="https://www.linkedin.com/company/gdgoctupmanila"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
               <svg
                 width="40"
                 height="40"
@@ -97,26 +92,13 @@ function Footer(){
                   fill="#0077B7"
                 />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>
       {/* Sub footer */}
       <div className={`${styles.subFooter} d-flex flex-column align-items-center justify-content-center`}>
         <img src={logo} alt="GDGoC-logo" className={styles.logo} />
-        <div className="d-flex flex-column align-items-center flex-md-row gap-4">
-          <Link to='/' className={styles.home}>Home</Link>
-          <a href="#" className={styles.events}>Events
-            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11.6667 8.08333V13.3333C11.6667 13.6428 11.5437 13.9395 11.325 14.1583C11.1062 14.3771 10.8094 14.5 10.5 14.5H1.16667C0.857247 14.5 0.560501 14.3771 0.341709 14.1583C0.122916 13.9395 0 13.6428 0 13.3333V4C0 3.69058 0.122916 3.39383 0.341709 3.17504C0.560501 2.95625 0.857247 2.83333 1.16667 2.83333H6.41667C6.57138 2.83333 6.71975 2.89479 6.82915 3.00419C6.93854 3.11358 7 3.26196 7 3.41667C7 3.57138 6.93854 3.71975 6.82915 3.82915C6.71975 3.93854 6.57138 4 6.41667 4H1.16667V13.3333H10.5V8.08333C10.5 7.92862 10.5615 7.78025 10.6709 7.67085C10.7802 7.56146 10.9286 7.5 11.0833 7.5C11.238 7.5 11.3864 7.56146 11.4958 7.67085C11.6052 7.78025 11.6667 7.92862 11.6667 8.08333ZM14 1.08333C14 0.928624 13.9385 0.780251 13.8291 0.670855C13.7197 0.561458 13.5714 0.5 13.4167 0.5H8.75C8.63456 0.499909 8.52169 0.534072 8.42568 0.598163C8.32966 0.662255 8.25483 0.753392 8.21064 0.860039C8.16645 0.966686 8.15489 1.08405 8.17744 1.19726C8.19999 1.31048 8.25562 1.41446 8.33729 1.49604L10.2586 3.41667L7.17062 6.50396C7.06117 6.61341 6.99968 6.76187 6.99968 6.91667C6.99968 7.07146 7.06117 7.21992 7.17062 7.32938C7.28008 7.43883 7.42854 7.50032 7.58333 7.50032C7.73813 7.50032 7.88658 7.43883 7.99604 7.32938L11.0833 4.24135L13.004 6.16271C13.0855 6.24438 13.1895 6.30001 13.3027 6.32256C13.416 6.3451 13.5333 6.33355 13.64 6.28936C13.7466 6.24517 13.8377 6.17034 13.9018 6.07432C13.9659 5.97831 14.0001 5.86544 14 5.75V1.08333Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
-        <Link to='/project' className={styles.project}>Project</Link>
-        <Link to='/team' className={styles.team}>Team</Link>
-        </div>
         <p className={styles.copyright}>&copy; 2025 Google Developer Groups on Campus TUP Manila. <br/> All Rights Reserved.</p>
       </div>
     </div>

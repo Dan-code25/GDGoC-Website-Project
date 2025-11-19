@@ -11,16 +11,16 @@
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
   z-index: 0;
 }
 
 .waves img {
-  width: 100%;
-  height: auto;
-  display: block;
-  line-height: 0;
+  width: 120%;
+  max-width: none;
   object-fit: cover;
-  margin:0 auto;
+  transform: translateX(-10%);
+  display: block;
 }
 
 
@@ -84,23 +84,23 @@
   margin: 0;
   font-size: 3rem;
   font-weight: bold;
-  font-family: 'Product Sans Medium', sans-serif;
+  font-family: "ProductSans", sans-serif !important;
 }
 
 .content-grid h2 {
   grid-area: h2;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.3;
-  font-family: 'Product Sans Medium', sans-serif;
+  font-family: "ProductSans", sans-serif !important;
 }
 
 .content-grid .content-body {
   grid-area: p;
   line-height: 1.3;
   font-size: 16px;
-  font-family: 'Product Sans Medium', sans-serif;
+  font-family: "ProductSans", sans-serif !important;
 }
 
 .content-grid .btn-primary .btn-icon {
@@ -110,13 +110,14 @@
 }
 
 
-.content-grid .content-body p {
+.content-grid .content-body p:not(:has(.faq-question)) {
   margin-bottom: 1rem;
   line-height: 1.3;
   font-size: 16px;
-  font-family: 'Product Sans Medium', sans-serif;
+  font-family: "ProductSans", sans-serif !important;
+  font-weight: 400;
   max-width: 60ch;
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 
@@ -126,19 +127,42 @@
   gap: 6px;
   background: #ea4335;
   color: white;
+  justify-content: center;
+  flex-shrink: 0; 
 }
 
 .btn-primary .btn-icon {
   width: 18px;
   height: 18px;
   margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.faq{
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-size: 16px;
+  font-family: "ProductSans", sans-serif !important;
+  max-width: 60ch;
+  opacity: 0.7;
 }
 
 .faq-question {
   color: #EA4335;
   font-weight: bold;
   font-size: 22px;
-  font-family: 'Product Sans Medium', sans-serif;
+  opacity: 1 !important;
+  font-family: "ProductSans", sans-serif !important;
+}
+
+.membership-fee {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-size: 16px;
+  font-family: "ProductSans", sans-serif !important;
+  max-width: 60ch;
+  opacity: 0.8;
+  font-weight: 800;
 }
 
 .highlight.red { color: #ea4335; font-weight: 700; }
@@ -156,7 +180,7 @@
   width:60%;     
   background-color: #EA4335;              
   margin: -40px auto 80px auto; 
-  opacity: 0.7;
+  opacity: 1 !important;
 }
 
 .footer {
@@ -170,10 +194,13 @@
     padding: 2rem 2.5rem;
   }
 
-  .waves img {
-    width: 210%;
-    transform: translateX(-25%);
-    object-fit: cover;
+    .waves img {
+    width: 220%;
+    max-width: none;
+    transform: translateX(-35%);
+    object-fit: contain;
+    height: auto;
+    display: block;
   }
 
   .content-grid,
@@ -212,7 +239,7 @@
     object-fit: contain;
   }
 
-  .content-grid .content-body {
+ .content-grid .content-body p:not(:has(.faq-question)){
     font-size: 1rem;
     line-height: 1.4;
     max-width: 600px;
@@ -231,7 +258,6 @@
   .content-grid.reverse .content-body,
   .content-grid.reverse .btn-primary {
     justify-self: center !important;
-    padding-left: 0 !important;
     margin-left: 20px;
   }
 
@@ -244,19 +270,26 @@
     height: 2.5px;
     margin: -20px auto 40px auto;
   }
+
+ .footer {
+  position: relative;
+  z-index: 3;
+}
 }
 
-/* MOBILE (max-width: 767px)*/
+
 @media (max-width: 767px) {
   .content-overlay {
     padding: 1.8rem 1.25rem;
   }
 
   .waves img {
-    width: 400%;
+    width: 450%;
     max-width: none;
-    transform: translateX(-40%);
+    transform: translateX(-42%);
     object-fit: cover;
+    height: auto;
+    display: block;
   }
 
   .content-grid,
@@ -276,15 +309,15 @@
   }
 
   .content-grid h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     line-height: 1.2;
     margin-bottom: 0.4rem;
     justify-self: center;
   }
 
   .content-grid h2 {
-    font-size: 1.5rem;
-    line-height: 1.3;
+    font-size: 1.7rem;
+    line-height: 1.2;
     margin-bottom: 0.6rem;
     justify-self: center;
   }
@@ -306,9 +339,8 @@
     text-align: center;
   }
 
-  .content-grid .content-body p {
+ .content-grid .content-body p:not(:has(.faq-question)){
     margin: 0.4rem auto;
-    opacity: 0.8;
   }
 
   .btn-primary {
@@ -326,7 +358,6 @@
   .btn-primary .btn-icon {
     width: 16px;
     height: 16px;
-    margin-right: 8px;
   }
 
   .content-grid.reverse h1,
@@ -334,7 +365,6 @@
   .content-grid.reverse .content-body,
   .content-grid.reverse .btn-primary {
     justify-self: center !important;
-    padding-left: 0 !important;
     margin-left: 20px;
   }
 

@@ -50,17 +50,21 @@ function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
         >
             <div className="profile-container" onClick={(e) => e.stopPropagation()}>
                 <AnimationBackground />
-                
+
                 <button className='ph--triangle-fill' onClick={handleExit}></button>
 
-                <div className='logOut profile' onClick={handleSignOut} role='button'>
-                    <span className="logoutText"></span> 
-                    <span className="logoutIcon"></span>
+                <div className="profile-actions">
+                    <span className="exitBtn" onClick={handleExit} />
+                    <div className="logOut profile" onClick={handleSignOut} role="button">
+                        <span className="logoutText"></span>
+                        <span className="logoutIcon"></span>
+                    </div>
                 </div>
+
 
                 <div className="name">
                     <h4>
-                        {firstName}, {lastName}
+                        {firstName} {lastName}
                     </h4>
                 </div>
                 <div className="inner-container">

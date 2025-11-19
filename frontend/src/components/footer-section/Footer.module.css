@@ -20,6 +20,7 @@
 
 .footerSubtext {
   font-family: "ProductSans", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   color: #838383;
   margin-bottom: 16px;
@@ -83,62 +84,61 @@
   margin: 0;
 }
 
+.gmailButton {
+  position: relative;
+  width: 49px;
+  height: 40px;
+}
+
+.gmailButton img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gmailButton .hovered {
+  opacity: 0;
+}
+
+.gmailButton:hover .hovered {
+  opacity: 1;
+}
+
+.instagramButton {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.instagramButton img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagramButton .hovered {
+  opacity: 0;
+}
+
+.instagramButton:hover .hovered {
+  opacity: 1;
+}
 /* Social media buttons initial state and hover */
-.gmailButton svg path {
-  transition: fill 0.1s ease;
-}
-
-.gmailBlue,
-.gmailGreen,
-.gmailRed,
-.gmailYellow,
-.gmailDarkRed {
-  fill: rgba(142, 144, 148, 0.5);
-}
-
-.gmailButton:hover .gmailBlue {
-  fill: #4285F4;
-}
-
-.gmailButton:hover .gmailGreen {
-  fill: #34A853;
-}
-
-.gmailButton:hover .gmailRed {
-  fill: #EA4335;
-}
-
-.gmailButton:hover .gmailYellow {
-  fill: #FBBC04;
-}
-
-.gmailButton:hover .gmailDarkRed {
-  fill: #C5221F;
-}
 
 .facebookButton svg path {
   fill: rgba(142, 144, 148, 0.5);
-  transition: fill 0.1s ease;
+  transition: fill 0.3s ease;
 }
 
 .facebookButton:hover svg path {
   fill: #1877F2;
 }
 
-.instagramButton svg {
-  width: 41px;
-  height: 40px;
-  transition: filter 0.1s ease;
-  filter: grayscale(100%) opacity(0.5);
-}
-
-.instagramButton:hover svg {
-  filter: none;
-}
-
 .twitterButton svg path{
   fill: rgba(142, 144, 148, 0.5);
-  transition: fill 0.1s ease;
+  transition: fill 0.3s ease;
 }
 
 .twitterButton:hover svg path {
@@ -147,7 +147,7 @@
 
 .linkedinButton svg path {
   fill: rgba(142, 144, 148, 0.5);
-  transition: fill 0.1s ease;
+  transition: fill 0.3s ease;
 }
 
 .linkedinButton:hover svg path {
@@ -164,8 +164,7 @@
 }
 
 .logo{
-  width: 320px;
-  height: 54px;
+  width: 300px;
   margin-bottom: 23px;
 }
 
@@ -238,6 +237,7 @@
   text-align: center;
   color: #202124;
   font-family: "ProductSans", sans-serif;
+  font-weight: 400;
   font-size: 14px;
 }
 

@@ -68,13 +68,20 @@ function ChangePassword({ onClose, isClosing }) {
                 <div className="OverlayChangePassword-container">
                     <AnimationBackground />
                     <div className="ChangePassword">
+
+                        <button className='ph--triangle-fill' onClick={handleExit}></button>
+
+                        {/* Profile Actions - Same uses in profile exitBtn*/}
+                        <div className="profile-actions">
+                            <span className="exitBtn" onClick={handleExit} />
+                        </div>
+
                         <h1>Change Password</h1>
 
                         <div className="IdContainer">
                             <span className="IdIcon"></span>
                             <input id='gdgID' type="text" placeholder="GDGOC ID" className="idInput"
                             value={gdgocid} onChange={(e)=>{setGgdocid(e.target.value)}}/> 
-                            {/* I removed equired */}
                         </div>
                         
                         <div className="OldPasswordContainer">
