@@ -1,0 +1,315 @@
+export const KNOWLEDGE_BASE = `
+*About Our Company: Google Developer Groups on Campus*
+- *Q: What is the GDGoC?*
+  - A: GDGoC or Google Developer Groups on Campus is a community of students from any academic undergraduate background that aims to build students' professional and personal network in technology, specifically software engineering, and at the same time get access to Google developer resources and work together to build solutions for local problems in a peer-to-peer learning environment.
+- *Q: What branch or school is this chapter in?*
+  - A: Technological University of the Philippines - Manila.
+- *Q: What is your mission?*
+  - A: To bring together developers and technologists to connect, learn, and grow alongside Google's technologies and experts.
+- *Q: When was GDGoC founded in TUP Manila?*
+  - A: 2022.
+- *Q: Where is GDGoC located?*
+  - A: TUP - Manila, Ayala Blvd., corner San Marcelino St., Ermita, Manila 1000.
+- *Q: Who do I contact for partnerships?*
+  - A: Kien Serapio.
+- *Q: Who are you?*
+  - A: I am GooglerAI. A friendly chatbot here to assist you!
+
+*Executives*
+- *Q: What is the role of an Executive?*
+  - A: Executives are leaders who oversee a department's operations, strategy, and staff to achieve organizational goals.
+- *Q: What are the executive positions?*
+  - A: The executive positions are President / Chapter Organizer, Chief Administrative Officer (CAO), Executive Secretary, Chief Operations Officer (COO), Chief Technology Officer (CTO), Chief Communications Officer - Events, Chief Communications Officer - Page, Chief Innovations Officer, Chief Human Resource Officer (CHRO), Chief Relations Officer (CRO), Chief Finance Officer (CFO), and Googlet Head.
+- *Q: Who is the President / Chapter Organizer?*
+  - A: Kien Serapio
+- *Q: What does the President / Chapter Organizer do?*
+  - A: As the highest-ranking executive, the President is responsible for the overall vision, mission, and financial well-being of the organization. They create strategies for growth and act as the main point of communication between GDG Philippines and the Executive Board.
+- *Q: Who is the Chief Administrative Officer (CAO)?*
+  - A: Josh Pantalunan
+- *Q: What does the Chief Administrative Officer (CAO) do?*
+  - A: The CAO is the right hand of the President, responsible for overseeing compliance with organization rules, helping plan events, and identifying goals and areas for improvement within the organization.
+- *Q: Who is the Executive Secretary?*
+  - A: Hannah Loraine Ropeta
+- *Q: What does the Executive Secretary do?*
+  - A: The Executive Secretary handles clerical duties, coordinates the executive's schedule for meetings and appointments, and keeps the Executive Board well-informed of upcoming duties and commitments.
+- *Q: Who is the Chief Operations Officer (COO)?*
+  - A: Jude Tabuzo
+- *Q: What does the Chief Operations Officer (COO) do?*
+  - A: The COO is responsible for overseeing the organization's ongoing operations, including all external and internal functions like finance and partnerships. They also create policies to ensure the well-being of Executive Board members.
+- *Q: Who is the Chief Technology Officer (CTO)?*
+  - A: Alfred Reyes
+- *Q: What does the Chief Technology Officer (CTO) do?*
+  - A: The CTO is in charge of all technological and innovation aspects of the organization. They provide workshops and training and lead teams of student engineers and specialists to create tech solutions for community partners.
+- *Q: Who is the Chief Communications Officer - Events?*
+  - A: Zendy Santos
+- *Q: What does the Chief Communications Officer - Events do?*
+  - A: The CCO for Events advocates for the organization's image and ensures consistent, high-quality marketing materials. They develop creative strategies, establish art direction, and oversee all documentation and publication for events.
+- *Q: Who is the Chief Communications Officer - Page?*
+  - A: Luke Joseph Renacido
+- *Q: What does the Chief Communications Officer - Page do?*
+  - A: The CCO for Page is in charge of advocating for the organization's image and maintaining the quality of marketing materials and multimedia. They develop creative strategies, manage documentation, and supervise officers in content creation.
+- *Q: Who is the Chief Innovations Officer?*
+  - A: Clifford Roy Torion
+- *Q: What does the Chief Innovations Officer do?*
+  - A: The CIO is in charge of generating and managing new ideas and innovations. They monitor research for new trends, come up with new technological solutions, and manage technologies during events.
+- *Q: Who is the Chief Human Resource Officer?*
+  - A: Racy Jhanna Ledres
+- *Q: What does the Chief Human Resource Officer (CHRO) do?*
+  - A: The CHRO is in charge of recruiting new members for the organization's growth. They work with leads to screen and evaluate applicants and assist with training programs.
+- *Q: Who is the Chief Relations Officer?*
+  - A: Maria Leonabelle Santos
+- *Q: What does the Chief Relations Officer (CRO) do?*
+  - A: The CRO works with the CHRO on member recruitment and with the COO on planning strategic collaborations that benefit both members and executives.
+- *Q: Who is the Chief Finance Officer?*
+  - A: Jefferson Padua
+- *Q: What does the Chief Finance Officer (CFO) do?*
+  - A: The CFO is in charge of the organization's financial well-being. They provide financial projections, develop growth plans, direct staff, and oversee all financial decisions, including budgeting and auditing.
+- *Q: Who is the Googlet Head?*
+  - A: Mitch Angela Maisog
+- *Q: What does the Googlet Head do?*
+  - A: The Googlet Head is responsible for planning and strategizing the creation and distribution of merchandise. This includes collaborating with vendors, setting prices, and handling order fulfillment.
+
+*Core Leads: Communications Department*
+- *Q: What is the Communications Department?*
+  - A: The Communications Department tells the story of GDGoC through compelling visuals, branding, and social media. They handle copywriting, graphic design, and public content.
+- *Q: What are the positions in the Communications Department?*
+  - A: The positions are Creatives and Branding Lead, Graphic & Video Promotions Lead, Publications and Certifications Lead, and Promotions Lead.
+- *Q: What does the Creatives and Branding Lead do?*
+  - A: In charge of creating visually appealing images that accompany written text and any other publication materials that the CCO deems necessary. Define requirements, visualize, and create graphics such as illustrations, logos, layouts, and photos.
+- *Q: What does the Graphic & Video Promotions Lead do?*
+  - A: In charge of producing visually appealing videos and motion graphics that accompany written text and any other publication materials that the CCO deemed necessary.
+- *Q: What does the Publications and Certifications Lead do?*
+  - A: In charge of creating aesthetically pleasing publications and certificates following each event, as well as any other publication materials deemed necessary by the CCO.
+- *Q: What does the Promotions Lead do?*
+  - A: In charge of creating social media posters, such as birthday greetings, congratulatory remarks, and any other publication materials. The person in responsible for ensuring brand consistency in marketing and social media messages by collaborating with the CCO and department heads.
+- *Officers:*  
+  - Zendy Santos (Chief Communications Officer - Events)  
+  - Luke Joseph Renacido (Chief Communications Officer - Page)  
+- *Core Leads:*  
+  - *Q: Who are the Creatives & Branding leads?*
+    - A: Liljanria Nicole Dequina, Samantha Egar  
+  - *Q: Who are the Promotions leads?*
+    - A: Nicole Drew Lazo, Juztynne Alcantara  
+  - *Q: Who are the Publications & Certifications leads?*
+    - A: May Corto, Prince Kyle Gayanes  
+  - *Q: Who are the Graphic & Video Promotions leads?*
+    - A: Aldred Mique, Marc John Lloyd Rivera  
+
+*Core Leads: Operations Department*
+- *Q: What is the Operations Department?*
+  - A: This department is in-charge of planning and executing the organization's yearly objectives, as well as fostering chapter development and member enrichment through events that align with the organization's advocacy. 
+- *Q: What are the positions in the Operations Department?*
+  - A: The positions are Junior Project Manager, Event Productions Lead, Technical Workshops Lead, and Operations Support.
+- *Q: What does the Junior Project Manager do?*
+  - A: Will be the focal person of the core team. Must be able to coordinate with the COO about all the GDSC's event and be able to create timelines considering the organization's goal, budget, and timeframe.
+- *Q: What does the Event Productions Lead do?*
+  - A: Is in charge of event coordination and ensures that everything goes smoothly and synchronously, from ceremonies to tabulation. He/she will also be the master of ceremonies for events.
+- *Q: What does the Technical Workshops Lead do?*
+  - A: Responsible in generating and operating ideas for workshops, coding sessions, hackathons, and technical talks to enhance members' skills and knowledge.
+- *Q: What does the Operations Support do?*
+  - A: Coordinates and support the overall event by assisting the production manager in event handling and ease of program flow.
+- *Officer:* Jude Tabuzo (Chief Operations Officer)
+- *Core Leads:*
+  - *Q: Who are the Junior Project Manager?*
+    - A: Kianna Alexandra Gragg, Krizza Angel Dela Cruz
+  - *Q: Who are the Technical Workshops Leads?*
+    - A: Walt Emerson Rimando, Francisco Mejia
+  - *Q: Who are the Events Production Leads?*
+    - A: Keith Nicole Fontanilla, John Gabriel Sia, Etienne Prince Lagaña, Loraine Angela Alagano, Dianne Taguibao
+  - *Q: Who are the Operations Supports?*
+    - A: Mark Jairielle Equizabal, Kyle Francis Papa, Miles Domondon, Kyle Andrew Manlapaz, Vetina Gene Clavaton, Rash Ian Sinag
+
+*Core Leads: Finance Department*
+- *Q: What is the Finance Department?*
+  - A: This department holds a purpose of developing and implementing marketing and promotional initiatives, as well as maintaining the organization's brand identity, allowing our programs and events to reach larger audience.
+- *Q: What are the positions in the Finance Department?*
+  - A: The positions are Manager, Finance Relations Assistant, Auditor, and Finance Assistant.
+- *Q: What does the Finance Manager do?*
+  - A: Manages and oversees all financial transactions related to external relations, including sponsorships and media partnerships.
+- *Q: What does the Finance Relations Assistant do?*
+  - A: A person in charge of assisting the Finance Relations Manager in developing new partnerships, such as sponsorships and media partners.
+- *Q: What does the Auditor do?*
+  - A: Documents audit tests and findings in workpapers. This role is responsible for ensuring compliance with internal control procedures by examining records and reports, and for reviewing data to assess the effectiveness of financial operations.
+- *Q: What does the Finance Assistant do?*
+  - A: A person in charge of assisting the Chief Finance Officer in keeping track of an organization's finances, including financial planning and updating financial records.
+- *Officer:* Jefferson Padua (Chief Finance Officer)  
+- *Core Leads:*  
+  - *Q: Who are the Auditors?*
+    - A: Gerardo B. Sison Jr., Mark Lorenz G. Etang  
+  - *Q: Who are the Finance Assistants?*
+    - A: Princess Venice Flores, Rainiel E. Nava  
+  - *Q: Who is the Finance Relations Manager?*
+    - A: Roshny Jen Cruz  
+  - *Q: Who is the Finance Relations Assistant?*
+    - A: Julie Ann S. Palmiano  
+
+*Core Leads: Technology Department*
+- *Q: What is the Technology Department?*
+  - A: Department of Technology's main objective is to concentrate on using technology to bring solutions to life. This will include project management, timetable tracking, and team leadership.
+- *Q: What are the positions in the Technology Department?*
+  - A: The positions are Front-End Development Lead, Back-End Development Lead, Robotics and Automations Lead, Project Management Lead, UI/UX Design Lead, and Artificial Intelligence / Machine Learning Lead.
+- *Q: What does the Front-End Development Lead do?*
+  - A: Guide the customer-facing aspect of projects as the Frontend Development Lead. The role revolves around creating appealing and functional applications, while ensuring an exceptional user experience through intuitive interfaces.
+- *Q: What does the Back-End Development Lead do?*
+  - A: Backend Development Lead is in charge of managing data communication between users and the server. Its primary objectives include developing server-side logic, establishing and maintaining the central database, and ensuring efficient processing of front-end requests.
+- *Q: What does the Robotics and Automations Lead do?*
+  - A: Take automation to the next level as the Robotics and Automation Lead. It involves creating intelligent systems and autonomous robots capable of performing tasks independently. Collaborating with the team, you will infuse our projects with Google's cutting-edge technology, elevating their sophistication and efficiency.
+- *Q: What does the Project Management Lead do?*
+  - A: Manages the entire project lifecycle, from initial concept to completion. This includes organizing project timelines, guiding team members, and ensuring that all plans stay on track and are successfully brought to life.
+- *Q: What does the UI/UX Design Lead do?*
+  - A: The role involves researching user behavior to inform design decisions, illustrating user flows, and maintaining the user interface and experience of deployed projects.
+- *Q: What does the Artificial Intelligence / Machine Learning Lead do?*
+  - A: This role ensures the continuous reliability of these models and involves researching and gathering essential data to inform their creation. The AI/ML Lead is also responsible for developing AI/ML-based systems.
+- *Officer:* Alfred Reyes (Chief Technology Officer)  
+- *Core Leads:*
+  - *Q: Who are the Frontend Development leads?*
+    - A: Dan Jheniel P. Bringas, Irwen G. Fronda, Catherine Mae G. Dela Cruz
+  - *Q: Who are the Backend Development leads?*
+    - A: Alex Galedo, Eldian Maxi D. Punzalan, Sean V. Lucino
+  - *Q: Who is the Robotics and Automations lead?*
+    - A: Amiel Keith E. Padilla
+  - *Q: Who is the Project Management lead?*
+    - A: Reign Ivann Bigol
+  - *Q: Who are the UI/UX Design leads?*
+    - A: Sharmaine Hannah Valenzuela, Vince Merick Santos, Lowel-Jay Rubino
+  - *Q: Who are the Artificial Intelligence / Machine Learning leads?*
+    - A: Red Dumalagan, Axel Magallanes, Christan Aningat, James Ivan Matienzo
+
+*Core Leads: Innovations Department*
+- *Q: What is the Innovations Department?*
+  - A: This department aims to extend solutions for the greater good and to bridge the technological and social effect divide. This department is also responsible for technical needs during events.
+- *Q: What are the positions in the Innovations Department?*
+  - A: The positions are Innovations Strategy Lead, Innovations Research Lead, Innovations Documentation Lead, and Community Engagement Lead.
+- *Q: What does the Innovations Strategy Lead do?*
+  - A: The one who will research on "how" the solution will be executed. Providing feasible methods, tools, and ways in achieving the idea.
+- *Q: What does the Innovations Research Lead do?*
+  - A: Formulates the ideas and innovations that can/will make a significant impact on our community, in compliance with the discovered problems in the community.
+- *Q: What does the Innovations Documentation Lead do?*
+  - A: Will be tasked in documenting events through photographs and screenshots of meetings.
+- *Q: What does the Community Engagement Lead do?*
+  - A: Will be responsible in establishing connections and relationships with start-ups, local organizations and the needs of the community.
+- *Officer:* Clifford Roy Torion (Chief Innovations Officer)  
+- *Core Leads:*  
+  - *Q: Who is the Innovations Strategy lead?*
+    - A: Nicholas Andrew Alcantara  
+  - *Q: Who is the Innovations Research lead?*
+    - A: Kyle Louise Lota  
+  - *Q: Who are the Community Engagement leads?*
+    - A: Khinito Christian Penamante, Mark Christian Lucto
+  - *Q: Who are the Innovation's Documentation leads?*
+    - A: Chrystel Baladjay, Ed Mcbille Paraiso, Ethan Lee Susara
+
+*Core Leads: Human Resource Department*
+- *Q: What is the Human Resource Department?*
+  - A: The Department of Human Resources focuses on the organization's growth for its members and core teams.
+- *Q: What are the positions in the Human Resource Department?*
+  - A: The positions are Human Resource Communication Lead, Department Relations Lead, and Member Development Lead.
+- *Q: What does the Human Resource Communication Lead do?*
+  - A: The Human Resource Communications Lead shall work with the Department Relations Lead to facilitate and improve communication among members by establishing creative and persuasive promoting strategies as well as the art direction of the HR team building activities.
+- *Q: What does the Department Relations Lead do?*
+  - A: Responsible for leading events that ensures the growth of the members of the team. They also serve as the "bridge" between departments. They create team-building activities that creates learning, bonds, and enjoyment among the members of the organization.
+- *Q: What does the Member Development Lead do?*
+  - A: Develop best practices for ensuring, tracking, and assessing members' development and growth throughout the year. He/she must establish ways on how to assess the members knowledge and skills as well as analyze what areas can be improved and derive a solution. The MDL shall also assist the CHRO with the training programs of the GDGOC TUPM.
+- *Officer:* Racy Jhanna Ledres (Chief Human Resource Officer)  
+- *Core Leads:*  
+  - *Q: Who is the Member Development lead?*
+    - A: Louise Andrea Concepcion  
+  - *Q: Who is the Development Relations lead?*
+    - A: Jewel Sarvida  
+  - *Q: Who are the Human Resource Communication leads?*
+    - A: Ailyn Layam, Jhan Leur Balberan
+
+*Core Leads: Relations Department*
+- *Q: What is the Relations Department?*
+  - A: This department handles the collaborative activities of the organization. Aside from this, external relations are also part of the department's scope. This includes managing collaborations with organizations, universities, non-governmental organizations, and government agencies.
+- *Q: What are the positions in the Relations Department?*
+  - A: The positions are Internal Relations Lead, External Relations Lead, Social Media Relations Lead, Data Custodian, Special Committee for Company Partner/s, Members Experience Manager, Public Relations Lead (International), and Public Relations Lead (Local).
+- *Q: What does the Internal Relations Lead do?*
+  - A: Internal Relations Lead is responsible for communicating and collaborating with other college organizations within TUP - Manila Campus.
+- *Q: What does the External Relations Lead do?*
+  - A: External Relations Lead handles the partnership and sponsorship outside the TUP - Manila such as companies and college organization from other university.
+- *Q: What does the Social Media Relations Lead do?*
+  - A: Social Media Relations Lead is responsible for tracking and analyzing the social media engagement generated through partnerships.
+- *Q: What does the Data Custodian do?*
+  - A: Maintain, secure, and care for records in accordance with the organization's guidelines.
+- *Q: What does the Special Committee for Company Partner/s do?*
+  - A: A committee who handles and manages relationships with company partners of GDSC-TUP Manila. He or she must act with due care and loyalty to protect the interest of the company.
+- *Q: What does the Members Experience Manager do?*
+  - A: This role is crucial for maintaining a positive relationship with company and continuously improving the organization's offerings based on their needs and preferences.
+- *Q: What does the Public Relations Lead (International) do?*
+  - A: A person that is responsible for handling and managing relationships such as sponsorships, external, or media partners of the GDGOC-TUP Manila internationally.
+- *Q: What does the Public Relations Lead (Local) do?*
+  - A: A person that is responsible for handling and managing relationships such as sponsorships, internal, or media partners of the GDGOC-TUP Manila locally.
+- *Officer:* Maria Leonabelle Santos (Chief Relations Officer)  
+- *Core Leads:*  
+  - *Q: Who is the Members Experience Manager lead?*
+    - A: Rouise Nicole Yumul  
+  - *Q: Who are the Internal Relations leads?*
+    - A: Adrian Veliganio, Jannah Kate Catoy
+  - *Q: Who are the External Relations leads?*
+    - A: Thea Delda, Dwyne Scott Japay
+  - *Q: Who are the Special Committee for Company Partners leads?*
+    - A: Antonio Videl, Aiza Camille Alvarez
+  - *Q: Who are the Data Custodian leads?*
+    - A: Eunice Juliana Azores, Gvan Antoni Rocas
+  - *Q: Who are the Public Relations leads (International)?*
+    - A: Jan Mikylla Tabamo, Joana Daniel Albaladejo
+  - *Q: Who are the Public Relations leads (Local)?*
+    - A: Altessa Jane Rosimo, Sophia Lorraine Banting
+  - *Q: Who are the Social Media Relations leads?*
+    - A: Dionne Margaret Vito, Maxime Salamat
+
+*Core Leads: Googlet Department*
+- *Q: What is the Googlet Department?*
+  - A: This department is responsible for creating and promoting the merchandise of the organization.
+- *Q: What are the positions in the Googlet Department?*
+  - A: The positions are Googlet Co-Head, Merchandise Designer, Photographer, Videographer, Graphic Designer, Video Editor, and Sales Associates.
+- *Q: What does the Googlet Co-Head do?*
+  - A: Responsible for managing social media accounts to increase publication visibility. This role also involves taking meeting minutes and keeping track of due dates and assignments.
+- *Q: What does the Merchandise Designer do?*
+  - A: Develops and implements the visual merchandising strategy. This includes creating compelling displays, designing floor layouts, and producing signage for special promotions to guide customers through a store.
+- *Q: What does the Photographer do?*
+  - A: Generating pictures of goods, merchandise, and other things that will be sold to customers or utilized in marketing materials.
+- *Q: What does the Videographer do?*
+  - A: Video production on site and on set. coordinating video shootings with clients and creative teams. putting up and taking down lights, props, cameras, microphones, and other equipment.
+- *Q: What does the Graphic Designer do?*
+  - A: Conceptualizes and creates visual assets like drawings, logos, and promotional images for Googlet department.
+- *Q: What does the Video Editor do?*
+  - A: Raw video snippets and footage are transformed by video editors into polished, high-quality productions that are used to educate, entertain, and persuade viewers to buy Googlet merchandise.
+- *Q: What do the Sales Associates do?*
+  - A: They are designated as the team's official sellers and are responsible for contacting the suppliers, storing the goods, collecting orders and delivery, and handling the money.
+- *Officer:* Mitch Angela Maisog (Googlet Head)  
+- *Core Leads:*  
+  - *Q: Who is the Googlet Co-Head?*
+    - A: Carla Mae Cardano
+  - *Q: Who are the Googlet - Merchandise Designer leads?*
+    - A: Lady Charlote Nano, Denisse Heart Tero
+  - *Q: Who is the Googlet - Photographer lead?*
+    - A: Toni Ahn Narra
+  - *Q: Who is the Googlet - Videographer lead?*
+    - A: Position is currently vacant.
+  - *Q: Who is the Googlet - Video Editor lead?*
+    - A: Jasmine Ali
+  - *Q: Who are the Graphic Designer leads?*
+    - A: Pia Loraine Recto, Jovielyn Eguillos, Samantha Michelle Tumala
+  - *Q: Who are the Googlet - Sales Associate leads?*
+    - A: Jaymie Lee Aquino, Ryu Narawa
+  
+*Membership Information*
+- *Q: What is included in Googler Basic Membership (₱30)?*
+  - A: Access to merchandise, mid-priority on onsite events, Googler ID, Googler certificate, and access to GDGoC website.  
+- *Q: What is included in Googler Pro Membership (₱50)?*
+  - A: All Basic perks, plus merchandise discounts, high-priority on onsite events, and early access to GDGoC news.  
+
+*General Information*
+- *Q: How do I contact you?*
+  - A: You can contact us at our official email or send us a message on our official Facebook page.
+- *Q: Where is GDGoC based?*
+  - A: This branch is located at TUP - Manila, at Ayala Blvd., corner San Marcelino St., Ermita, Manila 1000.
+- *Q: How can I join?*
+  - A: You can join by clicking the "Join Us!" button and logging in using your TUP Email. You can avail our basic membership or become a pro member!
+- *Q: What is the difference between Googler Basic Membership and Googler Pro Membership?*
+  - A: Basic Membership costs ₱30, Pro Membership costs ₱50. Both include access to merchandise, Googler ID, Googler certificate, access to GDGoC website, and event participation. Pro members also get merchandise discounts, high-priority on onsite events, and early access to GDGoC news.
+- *Q: What are the benefits of joining or becoming a Googler?*
+  - A: Membership unlocks exclusive events, resources, and experiences crafted to boost your skills, connections, and impact. Think of it as your ultimate power-up for the academic year.
+`;

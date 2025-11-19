@@ -5,9 +5,8 @@ import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
 import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
+import Discover from "../Discover/discover.jsx";
 
-
-/* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
 import slide_default_2 from "../../assets/home-images/slide_default_2.png";
 import slide_default_3 from "../../assets/home-images/slide_default_3.png";
@@ -24,6 +23,8 @@ import datacampBW from "../../assets/home-images/datacamp_1.png";
 import datacampColor from "../../assets/home-images/datacamp_2.png";
 import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
+import Chatbot from '../../components/chatbot/ChatBotOverlay';
+
 
 const slides = [
   slide_default_1,  
@@ -39,15 +40,16 @@ const slides = [
 ];
 
 export default function Slideshow() { 
-  useEffect(() => {
-    document.title = "Home | GDGoC TUPM";
-  }, []);
-
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
   const [isNextHover, setIsNextHover] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
+  const toggleChat = () => {
+    setIsChatOpen((prevState) => !prevState);
+  };
+  
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
 
@@ -57,27 +59,36 @@ export default function Slideshow() {
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
+  useEffect(() => {
+    document.title = "Home | GDGoC TUPM";
+  }, []);
   
 
   return (
     <div>
       <Navbar />
       <section className="slideshow-wrap">
-      <AnimationBackground />
-        <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+        <div className="global-anim-overlay">
+          <AnimationBackground />
+        </div>
+
+        <div
+          className="slideshow-track"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
           {slides.map((slide, index) => (
             <div
               className="slide"
               key={index}
-              style={{ backgroundImage: `url(${slide})` }} 
-            /> 
-          ))} <AnimationBackground />
-        </div> 
-
+              style={{ backgroundImage: `url(${slide})` }}
+            ></div>
+          ))}
+        </div>
 
         <div className="overlay">
           <h1>
-            Connecting Student Developers<br/> with the Power of{" "}
+            Connecting Student Developers
+            <br /> with the Power of{" "}
             <span className="google">
               <span>G</span>
               <span>o</span>
@@ -85,38 +96,45 @@ export default function Slideshow() {
               <span>g</span>
               <span>l</span>
               <span>e</span>
-            </span> {" "} Technologies
-          </h1> 
+            </span>{" "}
+            Technologies
+          </h1>
 
           <p>
-            The official Google Developer Groups on Campus at 
-            <span className="tup"> <br/>
+            The official Google Developer Groups on Campus at
+            <span className="tup">
+              {" "}
+              <br />
               Technological University of the Philippines - Manila
             </span>
-          </p> 
+          </p>
 
-          <button 
-              className="btn-primary" 
-              onClick={() => navigate("/discover")}
+          <button
+            className="btn-primary"
+            onClick={() => {
+              const section = document.getElementById("discover-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Discover GDGoC
           </button>
         </div>
 
-        <div >  
-          
+        <div>
           <button
-              className="arrow-btn prev"
-              onClick={goPrev}
-              aria-label="Previous slide"
-            />
+            className="arrow-btn prev"
+            onClick={goPrev}
+            aria-label="Previous slide"
+          />
 
-            <button
-              className="arrow-btn next"
-              onClick={goNext}
-              aria-label="Next slide"
-            />
-                      
+          <button
+            className="arrow-btn next"
+            onClick={goNext}
+            aria-label="Next slide"
+          />
+
           {/* dots */}
           <div className="dots">
             {slides.map((_, i) => (
@@ -127,9 +145,10 @@ export default function Slideshow() {
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
+            
           </div>
         </div>
-
+        </section>
         {/* sponsors row */}
         <div className="sponsors">
           <img
@@ -145,9 +164,10 @@ export default function Slideshow() {
             onMouseLeave={() => setIsGithubHover(false)}
           />
         </div>
-      </section>
-    
-      <Footer />
+        
+        <Discover/>
+        <Footer />
+      
     </div>
   );
 }

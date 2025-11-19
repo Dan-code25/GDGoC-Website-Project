@@ -5,7 +5,7 @@ import { useUser } from '../../context/UserContext';
 import AnimationBackground from '../AnimationBackground/AnimationBackground';
 
 
-function Profile({ onClose , onSignOut, isClosing}){
+function Profile({ onClose , onSignOut, onChangePassword, isClosing}){
     const [exiting, setExiting] = useState(false);
     const { firstName, lastName, username, gdgID, gdg_pts, profilePic, setProfilePic} = useUser()
 
@@ -19,6 +19,13 @@ function Profile({ onClose , onSignOut, isClosing}){
         
         setTimeout(() => {
             onSignOut();
+        }, 300);
+    };
+
+    const handleChangePasswordClick = () => {
+        setExiting(true);
+        setTimeout(() => {
+            onChangePassword();
         }, 300);
     };
 
@@ -43,17 +50,21 @@ function Profile({ onClose , onSignOut, isClosing}){
         >
             <div className="profile-container" onClick={(e) => e.stopPropagation()}>
                 <AnimationBackground />
-                
+
                 <button className='ph--triangle-fill' onClick={handleExit}></button>
 
-                <div className='logOut profile' onClick={handleSignOut} role='button'>
-                    <span className="logoutText"></span> 
-                    <span className="logoutIcon"></span>
+                <div className="profile-actions">
+                    <span className="exitBtn" onClick={handleExit} />
+                    <div className="logOut profile" onClick={handleSignOut} role="button">
+                        <span className="logoutText"></span>
+                        <span className="logoutIcon"></span>
+                    </div>
                 </div>
+
 
                 <div className="name">
                     <h4>
-                        {firstName}, {lastName}
+                        {firstName} {lastName}
                     </h4>
                 </div>
                 <div className="inner-container">
@@ -77,8 +88,13 @@ function Profile({ onClose , onSignOut, isClosing}){
                             <span className='username-@'>@</span>{username}
                         </p>
                         <p className='gdgID'>
-                            <span className='gdgID-prefix'>GDGTUP-25-</span>{gdgID}
+                            <span className='gdgID-prefix'></span>{gdgID}
                         </p>
+                        <button className='change-password-button' 
+                            onClick={handleChangePasswordClick}
+                        >
+                            Change Password
+                        </button>
                     </div>
                 </div>
                 <div className="exp-box">
