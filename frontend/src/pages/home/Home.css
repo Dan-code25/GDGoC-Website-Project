@@ -239,6 +239,7 @@
 .sponsors img {
   height: 38px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 

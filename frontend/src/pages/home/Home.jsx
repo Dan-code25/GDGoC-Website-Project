@@ -154,24 +154,30 @@ export default function Slideshow() {
         </section>
         {/* sponsors row */}
         <div className="sponsors">
+          <a href="https://www.datacamp.com" target="_blank" rel="noopener noreferrer">
           <img
             src={isDatacampHover ? datacampColor : datacampBW}
             alt="Datacamp"
             onMouseEnter={() => setIsDatacampHover(true)}
             onMouseLeave={() => setIsDatacampHover(false)}
           />
+          </a>
+          <a href="https://technomancer.biz" target="_blank" rel="noopener noreferrer">
             <img
             src={isTechnomancerHover ? technomancerColor : technomancerBW}
             alt="Technomancer"
             onMouseEnter={() => setIsTechnomancerHover(true)}
             onMouseLeave={() => setIsTechnomancerHover(false)}
           />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <img
             src={isGithubHover ? githubColor : githubBW}
             alt="GitHub"
             onMouseEnter={() => setIsGithubHover(true)}
             onMouseLeave={() => setIsGithubHover(false)}
           />
+          </a>
         </div>
         
         <Discover/>
