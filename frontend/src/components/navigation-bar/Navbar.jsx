@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../../assets/images/GDGOC logo.png';
 import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
@@ -18,6 +18,9 @@ function Navbar() {
 
 
   const { gdgID, logout, profilePic } = useUser();
+
+  const location = useLocation();
+  const sheTheme = location.pathname === '/shebuilds';
 
   const handleSignOut = () => {
     logout();
@@ -91,7 +94,7 @@ function Navbar() {
       {/* Navigation Bar */}
       <div className="container-fluid px-xl-5">
         <div
-          className={`${styles.navBar} d-flex align-items-center justify-content-between`}
+          className={`${styles.navBar} ${sheTheme ? styles.sheTheme : ''} d-flex align-items-center justify-content-between`}
         >
           <img className={styles.logo} src={logo} alt="GDGC logo" />
           <button
@@ -130,6 +133,12 @@ function Navbar() {
             </Link>
             <Link to="/team" className={styles.team}>
               Team
+            </Link>
+            <Link to="/shebuilds" className={styles.shebuilds}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="248" height="97" viewBox="0 0 248 97">
+                <text x="20" y="64" font-family="Pacifico, cursive" font-size="48" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none">SheBuilds</text>
+                <text x="20" y="64" font-family="Pacifico, cursive" font-size="48" fill="#CC1F78">SheBuilds</text>
+              </svg>
             </Link>
             <button
               className={styles.joinButton}
@@ -276,6 +285,12 @@ function Navbar() {
               </Link>
               <Link to="/team" className={styles.team} onClick={handleNavClick}>
                 Team
+              </Link>
+              <Link to="/shebuilds" className={styles.shebuilds} onClick={handleNavClick}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="248" height="97" viewBox="0 0 248 97">
+                  <text x="20" y="64" font-family="Pacifico, cursive" font-size="48" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none">SheBuilds</text>
+                  <text x="20" y="64" font-family="Pacifico, cursive" font-size="48" fill="#CC1F78">SheBuilds</text>
+                </svg>
               </Link>
             </div>
             <div className="d-flex flex-column gap-4">

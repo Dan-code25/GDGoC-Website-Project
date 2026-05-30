@@ -44,6 +44,34 @@
   padding-bottom: 50px;
 }
 
+@keyframes pulseFloat {
+  0%, 100% {
+    transform: rotate(-5deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+}
+
+.shebuilds {
+  display: inline-flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  animation: pulseFloat 2.5s ease-in-out infinite;
+  transform-origin: center;
+  transition: filter 0.3s ease;
+}
+
+.shebuilds svg {
+  height: 40px;
+  width: auto;
+}
+
+.shebuilds:hover {
+  filter: brightness(1.2);
+}
+
 /* Navigation bar sections */
 .events{
   display: inline-flex;
@@ -214,6 +242,37 @@
 }
 
 
+/* SheBuilds page theme (route-scoped) */
+.sheTheme {
+  background: rgba(253, 228, 249, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 0 0 18px 18px;
+  border-bottom: 1px solid rgba(255, 84, 176, 0.18);
+}
+.sheTheme .home,
+.sheTheme .events,
+.sheTheme .project,
+.sheTheme .team {
+  color: #6b5566;
+}
+.sheTheme .home:hover,
+.sheTheme .events:hover,
+.sheTheme .project:hover,
+.sheTheme .team:hover {
+  color: #f4308f;
+}
+.sheTheme .joinButton {
+  background: linear-gradient(135deg, #ff84c5 0%, #ff54b0 45%, #f4308f 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.sheTheme .joinButton:hover {
+  filter: brightness(1.04);
+  background: linear-gradient(135deg, #ff84c5 0%, #ff54b0 45%, #f4308f 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
 /* Desktop Size */
 @media (min-width: 1201px) {
   .logo {
@@ -264,6 +323,10 @@
   .otherSection {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .shebuilds svg {
+    height: 32px;
   }
 
   .home,
@@ -331,6 +394,10 @@
   .otherSection {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .shebuilds svg {
+    height: 24px;
   }
 
   .home,
