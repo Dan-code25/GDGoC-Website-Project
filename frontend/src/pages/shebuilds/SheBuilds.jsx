@@ -4,7 +4,7 @@ import MascotCycle from './MascotCycle';
 import SheBuildsSplash from './SheBuildsSplash';
 import styles from './SheBuilds.module.css';
 
-const JOIN_URL = 'https://forms.gle/vfEcZzgwc1ugVaCTA';
+const JOIN_URL = 'https://gdg.community.dev/events/details/google-gdg-on-campus-technological-university-of-the-philippines-manila-philippines-presents-she-builds-women-in-tech-careers-2026';
 
 // Load every people-image regardless of spaces / mixed extensions in the
 // filename. Keys are the file paths; values are the resolved asset URLs.
