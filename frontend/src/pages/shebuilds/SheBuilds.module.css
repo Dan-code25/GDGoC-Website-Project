@@ -87,11 +87,12 @@
 .marquee{display:flex;gap:1.4rem;width:max-content;animation:scroll 26s linear infinite}
 .marqueeWrap:hover .marquee{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
-.sponsorCard{flex:0 0 auto;min-width:230px;height:120px;display:flex;align-items:center;justify-content:center;gap:.7rem;background:#fff;border-radius:var(--r-md);border:3px solid #fff;box-shadow:var(--shadow-soft);padding:1rem 1.6rem}
+.sponsorCard{flex:0 0 auto;min-width:230px;height:120px;display:flex;align-items:center;justify-content:center;gap:.7rem;background:#000;border-radius:var(--r-md);border:3px solid var(--rose-soft);box-shadow:var(--shadow-soft);padding:1rem 1.6rem}
 .sponsorLogo{display:flex;align-items:center;gap:.6rem;font-weight:800;color:var(--ink)}
 .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;font-weight:900;flex:0 0 auto;background:var(--grad-rose)}
 .txt{line-height:1.1;font-size:.95rem}
 .txt small{display:block;font-weight:500;color:var(--ink-soft);font-size:.68rem}
+.partnerLogo{max-width:170px;max-height:70px;object-fit:contain}
 
 /* members */
 .members{padding:clamp(3rem,6vw,5.5rem) clamp(1rem,5vw,3.5rem);max-width:1280px;margin-inline:auto}
@@ -106,7 +107,7 @@
 .member h3{font-family:var(--font-display);font-weight:700;font-size:1.18rem;line-height:1.2}
 .role{margin-top:.35rem;font-size:.82rem;font-weight:700;color:var(--rose-deep);letter-spacing:.01em;text-transform:uppercase}
 .year{margin-top:.2rem;font-size:.78rem;font-weight:600;color:var(--ink-soft);letter-spacing:.02em}
-.photoFallback{width:100%;height:100%;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:#fff;background:var(--grad-rose)}
+.photoFallback{width:100%;height:100%;display:grid;place-items:center;background:var(--grad-rose)}
 .twinkle{position:absolute;top:14px;right:16px;color:var(--blue-spark);font-size:1.1rem;opacity:0;transition:opacity .3s,transform .3s}
 .member:hover .twinkle{opacity:1;transform:rotate(20deg) scale(1.2)}
 

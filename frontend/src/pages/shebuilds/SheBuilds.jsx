@@ -33,17 +33,31 @@ const members = [
   { name: 'Francesca Togonon', position: 'Chief Finance Officer', year: '2024–2025', key: 'Francesca Togonon' },
   { name: 'Jamie Jasmine Saño', position: 'Chief Relations Officer', year: '2024–2025', key: 'Jamie Jasmine' },
   { name: 'Joshia Marie Antolin', position: 'Chief Communications Officer — Events', year: '2024–2025', key: 'Joshia Marie Antolin' },
-  { name: 'Maria Leonabelle Santos', position: 'Chief Communications Officer — Page', year: '2024–2025', key: 'Maria Leonabelle Santos' },
+  { name: 'Maria Leonabelle Santos', position: 'Chief Relations Officer', year: '2025–2026', key: 'Maria Leonabelle Santos' },
   { name: 'Juliet Balunsay', position: 'Executive Secretary', year: '2024–2025', key: 'Juliet Balunsay' },
   { name: 'Jeanne May Carolino', position: 'Core Team', year: '2024–2025', key: 'Jeanne May Carolino' },
+  { name: 'Hannah Lorraine Ropeta', position: 'Executive Secretary', year: '2025–2026', key: 'Hannah Lorraine Ropeta' },
+  { name: 'Mitch Angela Maisog', position: 'Googlet Head', year: '2025–2026', key: 'Mitch Angela Maisog' },
+  { name: 'Racy Jhanna D. Ledres', position: 'Chief Human Resources Officer', year: '2025–2026', key: 'Racy Jhanna D. Ledres' },
+  { name: 'Zendy Santos', position: 'Chief Communications Officer — Events', year: '2025–2026', key: 'Zendy Santos' },
 ];
 
+const partnerFiles = import.meta.glob(
+  '../../assets/SheBuilds/partners/*',
+  { eager: true, query: '?url', import: 'default' }
+);
+
+const partnerFor = (key) => {
+  const entry = Object.entries(partnerFiles).find(([path]) => path.includes(key));
+  return entry ? entry[1] : null;
+};
+
 const sponsors = [
-  { name: 'Your Brand Here', tag: 'Become a sponsor', glyph: '✦' },
-  { name: 'Your Brand Here', tag: 'Partner with us', glyph: '♥' },
-  { name: 'Your Brand Here', tag: 'Support women in tech', glyph: '★' },
-  { name: 'Your Brand Here', tag: 'Sponsor SheBuilds', glyph: '◆' },
-  { name: 'Your Brand Here', tag: 'Get featured', glyph: '✿' },
+  { name: 'GDGOC TUPM', tag: 'Organizer', logo: partnerFor('GDGOC TUPM LOGO') },
+  { name: 'Tutorials Dojo', tag: 'Partner', logo: partnerFor('Tutorials Dojo') },
+  { name: 'Hirejia', tag: 'Partner', logo: partnerFor('hirejia_logo') },
+  { name: 'Made by Aki', tag: 'Partner', logo: partnerFor('made by aki') },
+  { name: 'Avalanche', tag: 'Partner', logo: partnerFor('AVAX T1 LOGO') },
 ];
 
 function fallbackInitials(name) {
@@ -132,8 +146,9 @@ export default function SheBuilds() {
             {marqueeCards.map((s, i) => (
               <div className={styles.sponsorCard} key={i}>
                 <span className={styles.sponsorLogo}>
-                  <span className={styles.ic}>{s.glyph}</span>
-                  <span className={styles.txt}>{s.name}<small>{s.tag}</small></span>
+                  {s.logo
+                    ? <img src={s.logo} alt={s.name} className={styles.partnerLogo} />
+                    : <><span className={styles.ic}>✦</span><span className={styles.txt}>{s.name}<small>{s.tag}</small></span></>}
                 </span>
               </div>
             ))}
@@ -148,7 +163,7 @@ export default function SheBuilds() {
           <p>The leaders, builders, and changemakers who&apos;ve shaped our community through the years.</p>
         </div>
         <div className={styles.grid}>
-          {members.map((m, i) => {
+          {[...members].reverse().map((m, i) => {
             const img = photoFor(m.key);
             return (
               <article className={styles.member} key={m.key} style={{ transitionDelay: `${(i % 6) * 60}ms` }}>
@@ -156,7 +171,12 @@ export default function SheBuilds() {
                 <div className={styles.photo}>
                   {img
                     ? <img src={img} alt={m.name} loading="lazy" />
-                    : <div className={styles.photoFallback} aria-hidden="true">{fallbackInitials(m.name)}</div>}
+                    : <div className={styles.photoFallback} aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40%" height="40%">
+                          <circle cx="12" cy="8" r="4.5"/>
+                          <path d="M20 21a8 8 0 1 0-16 0"/>
+                        </svg>
+                      </div>}
                 </div>
                 <h3>{m.name}</h3>
                 <div className={styles.role}>{m.position}</div>
