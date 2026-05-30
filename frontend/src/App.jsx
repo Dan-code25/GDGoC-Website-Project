@@ -9,6 +9,7 @@ import Project from './pages/project-page/Project.jsx';
 import MembershipClosed from './pages/MembershipClosed.jsx';
 import Error404 from './pages/Error404.jsx';
 import UnderConstruction from './pages/UnderConstruction.jsx';
+import SheBuilds from './pages/shebuilds/SheBuilds.jsx';
 import ChangePassword from './components/ChangePassword/ChangePassword.jsx';
 import ChatbotOverlay from './components/chatbot/ChatBotOverlay.jsx';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/discover' element={<Discover />} />
           <Route path='/Membership-Closed' element={<MembershipClosed />} />
           <Route path='/Error404' element={<Error404 />} />
+          <Route path='/shebuilds' element={<SheBuilds />} />
           <Route path='/Under-Construction' element={<UnderConstruction />} />
           <Route path='/Change-Password' element={<ChangePassword />} />
           <Route path='*'element={<Error404 />} />
