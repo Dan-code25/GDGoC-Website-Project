@@ -368,7 +368,7 @@ import MascotCycle from './MascotCycle';
 import SheBuildsSplash from './SheBuildsSplash';
 import styles from './SheBuilds.module.css';
 
-const JOIN_URL = 'https://forms.gle/vfEcZzgwc1ugVaCTA';
+const JOIN_URL = 'https://gdg.community.dev/events/details/google-gdg-on-campus-technological-university-of-the-philippines-manila-philippines-presents-she-builds-women-in-tech-careers-2026/';
 
 const members = [
   { name: 'Andrea Reyes', role: 'Lead' },

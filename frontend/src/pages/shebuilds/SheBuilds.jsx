@@ -4,26 +4,38 @@ import MascotCycle from './MascotCycle';
 import SheBuildsSplash from './SheBuildsSplash';
 import styles from './SheBuilds.module.css';
 
-const JOIN_URL = 'https://forms.gle/vfEcZzgwc1ugVaCTA';
+const JOIN_URL = 'https://gdg.community.dev/events/details/google-gdg-on-campus-technological-university-of-the-philippines-manila-philippines-presents-she-builds-women-in-tech-careers-2026';
 
+// Load every people-image regardless of spaces / mixed extensions in the
+// filename. Keys are the file paths; values are the resolved asset URLs.
+const photoFiles = import.meta.glob(
+  '../../assets/SheBuilds/people-images/*',
+  { eager: true, query: '?url', import: 'default' }
+);
+const photoFor = (key) => {
+  const hit = Object.entries(photoFiles).find(([path]) => path.includes(key));
+  return hit ? hit[1] : null;
+};
+
+// `key` is a unique substring of the matching filename. Ordered by cohort year.
 const members = [
-  { name: 'Andrea Reyes', role: 'Lead' },
-  { name: 'Bianca Santos', role: 'Co-Lead' },
-  { name: 'Camille Tan', role: 'Tech Lead' },
-  { name: 'Denise Cruz', role: 'Web Dev Lead' },
-  { name: 'Erika Villanueva', role: 'Design Lead' },
-  { name: 'Faye Mendoza', role: 'Community Manager' },
-  { name: 'Grace Domingo', role: 'AI/ML Lead' },
-  { name: 'Hannah Lim', role: 'Events Lead' },
-  { name: 'Isabel Garcia', role: 'Marketing Lead' },
-  { name: 'Joyce Ramos', role: 'Partnerships Lead' },
-  { name: 'Kara Aquino', role: 'Mobile Dev Lead' },
-  { name: 'Liana Bautista', role: 'Cloud Lead' },
-];
-
-const palettes = [
-  ['#FF84C5', '#FF54B0'], ['#FF54B0', '#F4308F'], ['#FFB3DD', '#FF84C5'],
-  ['#C9A0E8', '#FF84C5'], ['#FF9ECF', '#C9A0E8'], ['#FF54B0', '#C9A0E8'],
+  { name: 'Justine Nicolas Borbe', position: 'GDSC Lead & President', year: '2021–2022', key: 'Justine Nicolas Borbe' },
+  { name: 'Angelicka Batalla', position: 'Chief Operations Officer', year: '2021–2022', key: 'Angelicka Batalla' },
+  { name: 'Ma. Elaiza Ilagan', position: 'Executive Secretary', year: '2021–2022', key: 'Elaiza Ilagan' },
+  { name: 'Reiny Lyn Matilac', position: 'Chief Human Resource Officer', year: '2021–2022', key: 'Reiny Lyn Matilac' },
+  { name: 'Trisha Mae Loren', position: 'Chief Relations Officer', year: '2021–2022', key: 'Trisha Mae Loren' },
+  { name: 'Kristine Nicole Carzon', position: 'Chief Operations Officer', year: '2022–2023', key: 'Carzon' },
+  { name: 'Elma Justo', position: 'Chief Human Resource Officer', year: '2022–2023', key: 'Elma Justo' },
+  { name: 'Sophia Mer Enriquez', position: 'Chief Human Resource Officer', year: '2022–2023', key: 'Sophia_Mer_Enriquez' },
+  { name: 'Kyla Krisha Toliao', position: 'Chief Communications Officer', year: '2022–2023', key: 'Kyla Krisha Toliao' },
+  { name: 'Loven Joy Velazquez', position: 'Chief Relations Officer — Local', year: '2022–2023', key: 'Loven Joy Velazquez' },
+  { name: 'Mary Jane Calulang', position: 'GDSC Lead', year: '2023–2024', key: 'Mary Jane Calulang' },
+  { name: 'Francesca Togonon', position: 'Chief Finance Officer', year: '2024–2025', key: 'Francesca Togonon' },
+  { name: 'Jamie Jasmine Saño', position: 'Chief Relations Officer', year: '2024–2025', key: 'Jamie Jasmine' },
+  { name: 'Joshia Marie Antolin', position: 'Chief Communications Officer — Events', year: '2024–2025', key: 'Joshia Marie Antolin' },
+  { name: 'Maria Leonabelle Santos', position: 'Chief Communications Officer — Page', year: '2024–2025', key: 'Maria Leonabelle Santos' },
+  { name: 'Juliet Balunsay', position: 'Executive Secretary', year: '2024–2025', key: 'Juliet Balunsay' },
+  { name: 'Jeanne May Carolino', position: 'Core Team', year: '2024–2025', key: 'Jeanne May Carolino' },
 ];
 
 const sponsors = [
@@ -34,27 +46,8 @@ const sponsors = [
   { name: 'Your Brand Here', tag: 'Get featured', glyph: '✿' },
 ];
 
-function initials(name) {
-  return name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase();
-}
-
-function Avatar({ name, index }) {
-  const [a, b] = palettes[index % palettes.length];
-  const id = `she-grad-${index}`;
-  return (
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label={name}>
-      <defs>
-        <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor={a} />
-          <stop offset="1" stopColor={b} />
-        </linearGradient>
-      </defs>
-      <rect width="200" height="200" fill={`url(#${id})`} />
-      <circle cx="100" cy="78" r="34" fill="rgba(255,255,255,.9)" />
-      <path d="M40 180c0-33 27-52 60-52s60 19 60 52z" fill="rgba(255,255,255,.9)" />
-      <text x="100" y="120" textAnchor="middle" fontFamily="Fraunces,serif" fontWeight="700" fontSize="26" fill="#F4308F">{initials(name)}</text>
-    </svg>
-  );
+function fallbackInitials(name) {
+  return name.split(' ').filter(Boolean).map((w) => w[0]).slice(0, 2).join('').toUpperCase();
 }
 
 export default function SheBuilds() {
@@ -155,14 +148,22 @@ export default function SheBuilds() {
           <p>The leaders, builders, and changemakers who&apos;ve shaped our community through the years.</p>
         </div>
         <div className={styles.grid}>
-          {members.map((m, i) => (
-            <article className={styles.member} key={m.name} style={{ transitionDelay: `${(i % 6) * 60}ms` }}>
-              <span className={styles.twinkle} aria-hidden="true">✦</span>
-              <div className={styles.photo}><Avatar name={m.name} index={i} /></div>
-              <h3>{m.name}</h3>
-              <div className={styles.role}>{m.role}</div>
-            </article>
-          ))}
+          {members.map((m, i) => {
+            const img = photoFor(m.key);
+            return (
+              <article className={styles.member} key={m.key} style={{ transitionDelay: `${(i % 6) * 60}ms` }}>
+                <span className={styles.twinkle} aria-hidden="true">✦</span>
+                <div className={styles.photo}>
+                  {img
+                    ? <img src={img} alt={m.name} loading="lazy" />
+                    : <div className={styles.photoFallback} aria-hidden="true">{fallbackInitials(m.name)}</div>}
+                </div>
+                <h3>{m.name}</h3>
+                <div className={styles.role}>{m.position}</div>
+                <div className={styles.year}>{m.year}</div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
